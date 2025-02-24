@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Array of background images for each slide (match your slide order)
     const backgroundImages = [
-        './assets/images/hero-banner.jpg',
-        './assets/images/hero-banner2.jpg',
-        './assets/images/hero-banner3.jpg'
+        './assets/images/slider-images/hero-banner.webp',
+        './assets/images/slider-images/hero-banner2.webp',
+        './assets/images/slider-images/hero-banner3.webp'
         
     ];
 
