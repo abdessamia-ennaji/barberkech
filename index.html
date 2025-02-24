@@ -9,9 +9,9 @@
   <!-- 
     - primary meta tags
   -->
-  <title>ZABBAR - DEMO</title>
-  <meta name="title" content="Barber - Barbers & Hair Cutting">
-  <meta name="description" content="This is a barber html template made by Ennaji Abdessamia">
+  <title>BARBER KECH</title>
+  <meta name="title" content="BARBER KECH">
+  <meta name="description" content="A Mobile Barber in Marrakech">
 
   <!-- 
     - favicon
@@ -22,6 +22,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/languagePopUp.css">
 
   <!-- 
     - google font link
@@ -50,6 +51,29 @@
     - #HEADER
   -->
 
+  <div id="language-popup" class="popup">
+      <div class="popup-content">
+          <h2>Choose Your Language</h2>
+          <div class="flags">
+              <div class="flag" data-lang="en">
+                  <img src="https://flagcdn.com/us.svg" alt="English">
+                  <span>English</span>
+              </div>
+              <div class="flag" data-lang="fr">
+                  <img src="https://flagcdn.com/fr.svg" alt="French">
+                  <span>French</span>
+              </div>
+              <div class="flag" data-lang="ar">
+                  <img src="https://flagcdn.com/ma.svg" alt="Arabic (Morocco)">
+                  <span>العربية</span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<div id="content">
+
+ 
   <header class="header">
 
     <div class="header-top">
@@ -60,7 +84,7 @@
           <li class="header-top-item">
             <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
 
-            <p class="item-title">Call Us :</p>
+            <p class="item-title" id="call_us">Call Us :</p>
 
             <a href="tel:01234567895" class="item-link">012 (345) 67 895</a>
           </li>
@@ -112,8 +136,8 @@
       <div class="container">
 
         <a href="#" class="logo">
-          ZABBAR
-          <span class="span">Hair Salon (DEMO)</span>
+          BARBER KECH
+          <span class="span">Mobile Barber</span>
         </a>
 
         <nav class="navbar container" data-navbar>
@@ -136,12 +160,15 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#appointment" class="navbar-link" data-nav-link>Appointment</a>
+              <a href="#ourproducts" class="navbar-link" data-nav-link>Our Products</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#testimonials" class="navbar-link" data-nav-link>testimonials</a>
             </li>
 
-            <li class="navbar-item">
+            <!-- <li class="navbar-item">
               <a href="#" class="navbar-link" data-nav-link>Contact</a>
-            </li>
+            </li> -->
 
           </ul>
         </nav>
@@ -150,7 +177,7 @@
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <a href="#" class="btn has-before">
+        <a href="#appointment" data-nav-link class="btn has-before">
           <span class="span">Appointment</span>
 
           <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -172,16 +199,14 @@
         - #HERO
       -->
 
-      <section class="section hero has-before has-bg-image" id="home" aria-label="home"
+      <!-- <section class="section hero has-before has-bg-image" id="home" aria-label="home"
         style="background-image: url('./assets/images/hero-banner.jpg')">
         <div class="container">
 
-          <h1 class="h1 hero-title">Barbers & Hair Cutting</h1>
+          <h1 class="h1 hero-title">Mobile Barber</h1>
 
           <p class="hero-text">
-            Sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-            suspendisse
-            ultrices gravida
+            Professional Haircuts Anytime, Anywhere
           </p>
 
           <a href="#" class="btn has-before">
@@ -191,7 +216,61 @@
           </a>
 
         </div>
+      </section> -->
+
+
+      <section class="section hero has-before has-bg-image" id="home" aria-label="home">
+        <div class="hero-bg" style="background-image: url('./assets/images/hero-banner.jpg')"></div>
+        <div class="slider-container">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="container slide-content">
+              <h1 class="h1 hero-title">Mobile Barber</h1>
+              <p class="hero-text">Professional Haircuts Anytime, Anywhere</p>
+              <div class="slider-dots">
+                <span class="dot" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="container slide-content">
+              <h1 class="h1 hero-title">Premium Hair Care</h1>
+              <p class="hero-text">Experience Luxury at Your Doorstep</p>
+              <div class="slider-dots">
+                <span class="dot" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="container slide-content">
+              <h1 class="h1 hero-title">Expert Stylists</h1>
+              <p class="hero-text">Quality Service On Your Schedule</p>
+              <div class="slider-dots">
+                <span class="dot" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="slider-btn prev" aria-label="Previous slide">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="slider-btn next" aria-label="Next slide">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
       </section>
+
 
 
 
@@ -207,144 +286,115 @@
           <h2 class="h2 section-title text-center">Service We Provide</h2>
 
           <p class="section-text text-center">
-            Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua suspendisse
+            Experience premium grooming wherever you are. Our mobile barbers bring top-notch cuts and styling right to your door.
           </p>
 
           <ul class="grid-list">
 
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-salon"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Hair Cutting Style</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Tailored haircuts to match your style, from classic to contemporary. Get the perfect cut without leaving your home.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-shampoo"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Hair Washing</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Refreshing and revitalizing hair washes using top-quality products, all from the comfort of your home.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-hot-stone"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Body Treatments</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Indulge in soothing body treatments, including massages and relaxation therapies, all delivered at your doorstep.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-treatment"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Beauty & Spa</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Experience premium beauty and spa services, including facials and skincare, with the convenience of at-home treatment.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-shaving-razor"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Stylist Shaving</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Enjoy professional shaving services, including beard trims and straight razor shaves, wherever you are.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
             <li>
               <div class="service-card">
-
                 <div class="card-icon">
                   <i class="flaticon-hair-dye"></i>
                 </div>
-
                 <h3 class="h3">
                   <a href="#" class="card-title">Multi Hair Colors</a>
                 </h3>
-
                 <p class="card-text">
-                  Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Vibrant and long-lasting hair colors, customized to your preferences, all without the need to leave your home.
                 </p>
-
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
-
               </div>
             </li>
-
+          
           </ul>
+          
 
         </div>
       </section>
@@ -364,7 +414,7 @@
           <h2 class="h2 section-title text-center">Awesome Pricing Plan</h2>
 
           <p class="section-text text-center">
-            Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua suspendisse
+            Affordable and transparent pricing for premium grooming services, all at your doorstep. Choose the plan that suits your needs.
           </p>
 
           <div class="pricing-tab-container">
@@ -611,12 +661,12 @@
               <h2 class="h2 section-title">Latest Photo Gallery</h2>
 
               <p class="section-text">
-                Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
-                suspendisse
+                Explore our latest work and see the precision and style we bring to every haircut, shave, and grooming session.
+
               </p>
             </div>
 
-            <a href="#" class="btn has-before">
+            <a href="./gallery.html" class="btn has-before">
               <span class="span">Explore More Gallery</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -746,43 +796,65 @@
               <h2 class="h2 section-title">Make Appointment</h2>
 
               <p class="section-text">
-                Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
-                suspendisse
+                Ready for a fresh look? Schedule your appointment now, and we’ll bring our expert barbering right to your door.
+
               </p>
 
-              <form action="" class="appoin-form">
-
+              <form id="whatsappForm" class="appoin-form">
                 <div class="input-wrapper">
                   <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
-
                   <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
                 </div>
-
+              
                 <div class="input-wrapper">
                   <input type="text" name="phone" placeholder="Phone Number" required class="input-field">
-
                   <select name="category" class="input-field">
-
                     <option value="Select category">Select category</option>
                     <option value="Beauty & spa">Beauty & spa</option>
                     <option value="Body massage">Body massage</option>
                     <option value="Shaving & Facial">Shaving & Facial</option>
                     <option value="Hair Color">Hair Color</option>
-
                   </select>
                 </div>
-
+              
                 <input type="date" name="date" required class="input-field date">
-
                 <textarea name="message" placeholder="Write Message" required class="input-field"></textarea>
-
+              
                 <button type="submit" class="form-btn">
                   <span class="span">Appointment Now</span>
-
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </button>
-
               </form>
+              <script>
+                document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+                  event.preventDefault(); // Prevent the default form submission
+              
+                  // Collect form data
+                  let name = document.querySelector("[name='name']").value;
+                  let email = document.querySelector("[name='email_address']").value;
+                  let phone = document.querySelector("[name='phone']").value;
+                  let category = document.querySelector("[name='category']").value;
+                  let date = document.querySelector("[name='date']").value;
+                  let message = document.querySelector("[name='message']").value;
+              
+                  // Construct the WhatsApp message
+                  let whatsappMessage = `Hello, I would like to book an appointment:%0A
+                  - Name: ${name}%0A
+                  - Email: ${email}%0A
+                  - Phone: ${phone}%0A
+                  - Category: ${category}%0A
+                  - Date: ${date}%0A
+                  - Message: ${message}`;
+              
+                  // Replace with the correct WhatsApp number (including country code)
+                  let phoneNumber = "212706194405";
+              
+                  // Open WhatsApp chat
+                  let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+                  window.open(whatsappURL, "_blank");
+                });
+              </script>
+              
 
             </div>
 
@@ -795,6 +867,181 @@
 
         </div>
       </section>
+
+      <!-- 
+        - #OURPRODUCTS
+      -->
+      <section class="section gallery" id="ourproducts" aria-label="ourproducts">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <h2 class="h2 section-title">Our products</h2>
+
+              <p class="section-text">
+                Our top-quality grooming products ensure every haircut, shave, and treatment is a perfect experience. Explore our range of products.
+
+              </p>
+            </div>
+
+            <a href="./products.html" class="btn has-before">
+              <span class="span">Explore More Products</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="https://maisondasa.com/cdn/shop/files/19.svg?v=1698802390" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Hair Cutting</h3>
+
+                  <p class="card-text">Barbers & Salon Services</p>
+
+                  <a href="#" class="card-btn" aria-label="Read more">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="https://maisondasa.com/cdn/shop/files/19.svg?v=1698802390" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Hair Cutting</h3>
+
+                  <p class="card-text">Barbers & Salon Services</p>
+
+                  <a href="#" class="card-btn" aria-label="Read more">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="https://maisondasa.com/cdn/shop/files/19.svg?v=1698802390" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Hair Cutting</h3>
+
+                  <p class="card-text">Barbers & Salon Services</p>
+
+                  <a href="#" class="card-btn" aria-label="Read more">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="https://maisondasa.com/cdn/shop/files/19.svg?v=1698802390" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Hair Cutting</h3>
+
+                  <p class="card-text">Barbers & Salon Services</p>
+
+                  <a href="#" class="card-btn" aria-label="Read more">
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #TESTIMONIALS
+      -->
+    <section class="section testimonials" id="testimonials" aria-label="testimonials">
+        <h2 class="testimonials-heading">What Our Clients Say</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds" 
+                    alt="User 1" class="testimonial-img">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p class="quote">"Amazing service! The team was professional and delivered high-quality work."</p>
+                <p class="author">- Alice Johnson</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds" 
+                    alt="User 2" class="testimonial-img">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="quote">"Outstanding experience! I will definitely be using this service again."</p>
+                <p class="author">- Mark Evans</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds" 
+                    alt="User 3" class="testimonial-img">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="quote">"Simply the best! High-quality work and great customer support."</p>
+                <p class="author">- Sophia Martinez</p>
+            </div>
+        </div>
+    </section>
 
     </article>
   </main>
@@ -815,8 +1062,8 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            ZABBAR
-            <span class="span">Hair Salon</span>
+            BARBER KECH
+            <span class="span">Mobile Barber</span>
           </a>
 
           <form action="" class="input-wrapper">
@@ -1009,14 +1256,16 @@
   <!-- 
     - #WHATSAPP FLOAT
   -->
-  <a href="https://wa.me/+212702393173" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/+212706194405" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp whatsapp-icon"></i>
 </a>
-
+</div>
   <!-- 
     - custom js link
   -->
+  <script src="./assets/js/slider.js" defer></script>
   <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/languagePopUp.js" defer></script>
 
   <!-- 
     - ionicon link
