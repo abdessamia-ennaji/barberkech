@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
     const select_category = document.getElementById('select_category');
-    const app_beauty_spa = document.getElementById('app_beauty_spa');
-    const app_head_massage = document.getElementById('app_head_massage');
-    const shaving_facial = document.getElementById('shaving_facial');
-    const hair_color = document.getElementById('hair_color');
+    // const app_beauty_spa = document.getElementById('app_beauty_spa');
+    // const app_head_massage = document.getElementById('app_head_massage');
+    // const shaving_facial = document.getElementById('shaving_facial');
+    // const hair_color = document.getElementById('hair_color');
     const write_message = document.getElementById('write_message');
     const appointment_now = document.getElementById('appointment_now');
     // ========================================================================
@@ -85,6 +85,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const product_title = document.getElementById('product_title');
     const product_text = document.getElementById('product_text');
     const explore_products = document.getElementById('explore_products');
+
+
+    // ========================================================================
+    // TESTIMONIALS ELEMENTS
+    // ========================================================================
+    const testimonials_title = document.getElementById('testimonials_title');
+    const quote1 = document.getElementById('quote1');
+    const author1 = document.getElementById('author1');
+    const quote2 = document.getElementById('quote2');
+    const author2 = document.getElementById('author2');
+    const quote3 = document.getElementById('quote3');
+    const author3 = document.getElementById('author3');
+
+
     // ========================================================================
     // SECTION: Translation Data
     // ========================================================================
@@ -164,7 +178,14 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             testimonials : {
                 testimonials_title : 'What Our Clients Say',
-            }
+                quote1 : '"Amazing service! The team was professional and delivered high-quality work."',
+                author1 : '- Alice Johnson',
+                quote2 : '"Outstanding experience! I will definitely be using this service again."',
+                author2 : '- Mark Evans',
+                quote3 : '"Simply the best! High-quality work and great customer support."',
+                author3 : '- Sophia Martinez',
+            },
+            
         },
         fr: {
             header: {
@@ -241,7 +262,14 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             testimonials: {
                 testimonials_title: 'Ce que disent nos clients',
-            }
+                quote1: '"Service incroyable ! L’équipe était professionnelle et a fourni un travail de haute qualité."',
+                author1: '- Alice Johnson',
+                quote2: '"Expérience exceptionnelle ! Je vais certainement utiliser ce service à nouveau."',
+                author2: '- Mark Evans',
+                quote3: '"Tout simplement le meilleur ! Travail de qualité et excellent service client."',
+                author3: '- Sophia Martinez',
+            },
+            
             
             
             
@@ -329,7 +357,15 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             testimonials: {
                 testimonials_title: 'ماذا يقول عملاؤنا',
-            }
+                quote1: '"خدمة مذهلة! كان الفريق محترفًا وقدم عملًا عالي الجودة."',
+                author1: '- أليس جونسون',
+                quote2: '"تجربة رائعة! سأستخدم هذه الخدمة بالتأكيد مرة أخرى."',
+                author2: '- مارك إيفانز',
+                quote3: '"ببساطة الأفضل! عمل عالي الجودة ودعم عملاء رائع."',
+                author3: '- صوفيا مارتينيز',
+            },
+
+            
             
 
         }
@@ -423,10 +459,13 @@ document.addEventListener('DOMContentLoaded', function() {
         email.placeholder = translations[lang].appointment.email;
         phone.placeholder = translations[lang].appointment.phone;
         select_category.textContent = translations[lang].appointment.select_category;
-        app_beauty_spa.textContent = translations[lang].appointment.app_beauty_spa;
-        app_head_massage.textContent = translations[lang].appointment.app_head_massage;
-        shaving_facial.textContent = translations[lang].appointment.shaving_facial;
-        hair_color.textContent = translations[lang].appointment.hair_color;
+
+        // BUG 🐛
+        // app_beauty_spa.textContent = translations[lang].appointment.app_beauty_spa;
+        // app_head_massage.textContent = translations[lang].appointment.app_head_massage;
+        // shaving_facial.textContent = translations[lang].appointment.shaving_facial;
+        // hair_color.textContent = translations[lang].appointment.hair_color;
+        // BUG 🐛
         write_message.placeholder = translations[lang].appointment.write_message;
         appointment_now.textContent = translations[lang].appointment.appointment_now;
 
@@ -437,7 +476,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // TESTIMONIALS ELEMENTS
         testimonials_title.textContent = translations[lang].testimonials.testimonials_title;
+        quote1.textContent = translations[lang].testimonials.quote1;
+        author1.textContent = translations[lang].testimonials.author1;
+        quote2.textContent = translations[lang].testimonials.quote2;
+        author2.textContent = translations[lang].testimonials.author2;
+        quote3.textContent = translations[lang].testimonials.quote3;
+        author3.textContent = translations[lang].testimonials.author3;
 
     }
-
+    
 });
