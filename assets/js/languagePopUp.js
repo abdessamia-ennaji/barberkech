@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 quote3 : '"Simply the best! High-quality work and great customer support."',
                 author3 : '- Sophia Martinez',
             },
-            
+
         },
         fr: {
             header: {
@@ -483,6 +483,12 @@ document.addEventListener('DOMContentLoaded', function() {
         quote3.textContent = translations[lang].testimonials.quote3;
         author3.textContent = translations[lang].testimonials.author3;
 
+        //FOOTER ELEMENTS
+        
+
+
+        // Change direction of text if language is Arabic
+        header.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     }
     
 });
