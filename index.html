@@ -92,9 +92,9 @@
           <li class="header-top-item">
             <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-            <p class="item-title">Opening Hour :</p>
+            <p class="item-title" id="opening_hour">Opening Hour :</p>
 
-            <p class="item-text">Sunday - Friday, 08 am - 09 pm</p>
+            <p class="item-text" id="opening_hour_time">Sunday - Friday, 08 am - 09 pm</p>
           </li>
 
           <li>
@@ -135,35 +135,35 @@
     <div class="header-bottom" data-header>
       <div class="container">
 
-        <a href="#" class="logo">
+        <a href="#" class="logo" id="barber_kech">
           BARBER KECH
-          <span class="span">Mobile Barber</span>
+          <span class="span" id="mobile_barber">Mobile Barber</span>
         </a>
 
         <nav class="navbar container" data-navbar>
           <ul class="navbar-list">
 
             <li class="navbar-item">
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+              <a href="#home" class="navbar-link" data-nav-link id="nav_home">Home</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#services" class="navbar-link" data-nav-link>Services</a>
+              <a href="#services" class="navbar-link" data-nav-link id="nav_services">Services</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#pricing" class="navbar-link" data-nav-link>Pricing</a>
+              <a href="#pricing" class="navbar-link" data-nav-link id="nav_pricing">Pricing</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
+              <a href="#gallery" class="navbar-link" data-nav-link id="nav_gallery">Gallery</a>
             </li>
 
             <li class="navbar-item">
-              <a href="#ourproducts" class="navbar-link" data-nav-link>Our Products</a>
+              <a href="#ourproducts" class="navbar-link" data-nav-link id="our_products">Our Products</a>
             </li>
             <li class="navbar-item">
-              <a href="#testimonials" class="navbar-link" data-nav-link>testimonials</a>
+              <a href="#testimonials" class="navbar-link" data-nav-link id="nav_testimonials">testimonials</a>
             </li>
 
             <!-- <li class="navbar-item">
@@ -178,7 +178,7 @@
         </button>
 
         <a href="#appointment" data-nav-link class="btn has-before">
-          <span class="span">Appointment</span>
+          <span class="span" id="nav_appointment">Appointment</span>
 
           <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
         </a>
@@ -225,8 +225,8 @@
           <!-- Slide 1 -->
           <div class="slide">
             <div class="container slide-content">
-              <h1 class="h1 hero-title">Mobile Barber</h1>
-              <p class="hero-text">Professional Haircuts Anytime, Anywhere</p>
+              <h1 class="h1 hero-title" id="slide_title1">Mobile Barber</h1>
+              <p class="hero-text" id="slide_text1">Professional Haircuts Anytime, Anywhere</p>
               <div class="slider-dots">
                 <span class="dot" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
@@ -238,8 +238,8 @@
           <!-- Slide 2 -->
           <div class="slide">
             <div class="container slide-content">
-              <h1 class="h1 hero-title">Premium Hair Care</h1>
-              <p class="hero-text">Experience Luxury at Your Doorstep</p>
+              <h1 class="h1 hero-title" id="slide_title2">Premium Hair Care</h1>
+              <p class="hero-text" id="slide_text2">Experience Luxury at Your Doorstep</p>
               <div class="slider-dots">
                 <span class="dot" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
@@ -251,8 +251,8 @@
           <!-- Slide 3 -->
           <div class="slide">
             <div class="container slide-content">
-              <h1 class="h1 hero-title">Expert Stylists</h1>
-              <p class="hero-text">Quality Service On Your Schedule</p>
+              <h1 class="h1 hero-title" id="slide_title3">Expert Stylists</h1>
+              <p class="hero-text" id="slide_text3">Quality Service On Your Schedule</p>
               <div class="slider-dots">
                 <span class="dot" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
@@ -283,9 +283,9 @@
       <section class="section service" id="services" aria-label="services">
         <div class="container">
 
-          <h2 class="h2 section-title text-center">Service We Provide</h2>
+          <h2 class="h2 section-title text-center" id="service_title">Service We Provide</h2>
 
-          <p class="section-text text-center">
+          <p class="section-text text-center" id="service_text">
             Experience premium grooming wherever you are. Our mobile barbers bring top-notch cuts and styling right to your door.
           </p>
 
@@ -297,12 +297,12 @@
                   <i class="flaticon-salon"></i>
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Hair Cutting Style</a>
+                  <a href="#" class="card-title" id="service_card_title1">Hair Cutting Style</a>
                 </h3>
-                <p class="card-text">
+                <p class="card-text" id="service_card_text1">
                   Tailored haircuts to match your style, from classic to contemporary. Get the perfect cut without leaving your home.
                 </p>
-                <a href="#" class="card-btn" aria-label="more">
+                <a href="" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
               </div>
@@ -314,9 +314,9 @@
                   <i class="flaticon-shampoo"></i>
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Hair Washing</a>
+                  <a href="#" class="card-title" id="service_card_title2">Hair Treatment</a>
                 </h3>
-                <p class="card-text">
+                <p class="card-text" id="service_card_text2">
                   Refreshing and revitalizing hair washes using top-quality products, all from the comfort of your home.
                 </p>
                 <a href="#" class="card-btn" aria-label="more">
@@ -328,14 +328,15 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <i class="flaticon-hot-stone"></i>
+                  <!-- <i class="flaticon-hot-stone"></i> -->
+                  <img src="./assets/images/head-massage.svg" alt="">
+                  <!-- <i class="flaticon-head-massage"></i> -->
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Body Treatments</a>
+                  <a href="#" class="card-title" id="service_card_title3">head Massage</a>
                 </h3>
-                <p class="card-text">
-                  Indulge in soothing body treatments, including massages and relaxation therapies, all delivered at your doorstep.
-                </p>
+                <p class="card-text" id="service_card_text3">
+                  Relax with our rejuvenating head massage, designed to relieve tension and improve circulation, all at your doorstep.                </p>
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
@@ -348,11 +349,10 @@
                   <i class="flaticon-treatment"></i>
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Beauty & Spa</a>
+                  <a href="#" class="card-title" id="service_card_title4">Skin Cleansing</a>
                 </h3>
-                <p class="card-text">
-                  Experience premium beauty and spa services, including facials and skincare, with the convenience of at-home treatment.
-                </p>
+                <p class="card-text" id="service_card_text4">
+                  Enjoy premium skin cleansing services, including facials and skincare, delivered right to your home.</p>
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
@@ -365,11 +365,10 @@
                   <i class="flaticon-shaving-razor"></i>
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Stylist Shaving</a>
+                  <a href="#" class="card-title" id="service_card_title5">Beard Shaping</a>
                 </h3>
-                <p class="card-text">
-                  Enjoy professional shaving services, including beard trims and straight razor shaves, wherever you are.
-                </p>
+                <p class="card-text" id="service_card_text5">
+                  Get professional beard shaping, trims, and straight razor shaves, wherever you are.</p>
                 <a href="#" class="card-btn" aria-label="more">
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
@@ -382,9 +381,9 @@
                   <i class="flaticon-hair-dye"></i>
                 </div>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Multi Hair Colors</a>
+                  <a href="#" class="card-title" id="service_card_title6">Multi Hair Colors</a>
                 </h3>
-                <p class="card-text">
+                <p class="card-text" id="service_card_text6">
                   Vibrant and long-lasting hair colors, customized to your preferences, all without the need to leave your home.
                 </p>
                 <a href="#" class="card-btn" aria-label="more">
@@ -411,9 +410,9 @@
         style="background-image: url('./assets/images/pricing-bg.jpg')">
         <div class="container">
 
-          <h2 class="h2 section-title text-center">Awesome Pricing Plan</h2>
+          <h2 class="h2 section-title text-center" id="pricing_title">Awesome Pricing Plan</h2>
 
-          <p class="section-text text-center">
+          <p class="section-text text-center" id="pricing_text">
             Affordable and transparent pricing for premium grooming services, all at your doorstep. Choose the plan that suits your needs.
           </p>
 
@@ -427,7 +426,7 @@
                     <i class="flaticon-beauty-salon" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text">All Pricing</p>
+                  <p class="btn-text" id="all_pricing">All Pricing</p>
                 </button>
               </li>
 
@@ -437,7 +436,7 @@
                     <i class="flaticon-relax" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text">Beauty & Spa</p>
+                  <p class="btn-text" id="beauty_spa">Beauty & Spa</p>
                 </button>
               </li>
 
@@ -445,9 +444,11 @@
                 <button class="filter-btn" data-filter-btn="body-treatments">
                   <div class="btn-icon">
                     <i class="flaticon-massage" aria-hidden="true"></i>
+                    <!-- <img src="./assets/images/head-massage.svg" alt="" style="display: block; height: 55px; line-height: 1;margin-block-end: 5px;"> -->
+
                   </div>
 
-                  <p class="btn-text">Body Treatments</p>
+                  <p class="btn-text" id="body_treatements">Body Treatments</p>
                 </button>
               </li>
 
@@ -457,7 +458,7 @@
                     <i class="flaticon-spa" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text">Face Washing</p>
+                  <p class="btn-text" id="face_washing">Face Washing</p>
                 </button>
               </li>
 
@@ -467,7 +468,7 @@
                     <i class="flaticon-yoga" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text">Meditations</p>
+                  <p class="btn-text" id="meditations">Meditations</p>
                 </button>
               </li>
 
@@ -477,7 +478,7 @@
                     <i class="flaticon-razor-blade" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text">Shaving</p>
+                  <p class="btn-text" id="shaving">Shaving</p>
                 </button>
               </li>
 
@@ -658,16 +659,16 @@
           <div class="title-wrapper">
 
             <div>
-              <h2 class="h2 section-title">Latest Photo Gallery</h2>
+              <h2 class="h2 section-title" id="gallery_title">Latest Photo Gallery</h2>
 
-              <p class="section-text">
+              <p class="section-text" id="gallery_text">
                 Explore our latest work and see the precision and style we bring to every haircut, shave, and grooming session.
 
               </p>
             </div>
 
             <a href="./gallery.html" class="btn has-before">
-              <span class="span">Explore More Gallery</span>
+              <span class="span" id="gallery_explore">Explore More Gallery</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </a>
@@ -793,35 +794,35 @@
 
             <div class="card-content">
 
-              <h2 class="h2 section-title">Make Appointment</h2>
+              <h2 class="h2 section-title" id="appointment_title">Make Appointment</h2>
 
-              <p class="section-text">
+              <p class="section-text" id="appointment_text">
                 Ready for a fresh look? Schedule your appointment now, and we’ll bring our expert barbering right to your door.
 
               </p>
 
               <form id="whatsappForm" class="appoin-form">
                 <div class="input-wrapper">
-                  <input type="text" name="name" placeholder="Your Full Name" required class="input-field">
-                  <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+                  <input type="text" name="name" placeholder="Your Full Name" required class="input-field" id="name">
+                  <input type="email" name="email_address" placeholder="Email Address" required class="input-field" id="email">
                 </div>
               
                 <div class="input-wrapper">
-                  <input type="text" name="phone" placeholder="Phone Number" required class="input-field">
+                  <input type="text" name="phone" placeholder="Phone Number" required class="input-field" id="phone">
                   <select name="category" class="input-field">
-                    <option value="Select category">Select category</option>
-                    <option value="Beauty & spa">Beauty & spa</option>
-                    <option value="Body massage">Body massage</option>
-                    <option value="Shaving & Facial">Shaving & Facial</option>
-                    <option value="Hair Color">Hair Color</option>
+                    <option value="Select category" id="select_category">Select category</option>
+                    <option value="Beauty & spa" id="beauty_spa">Beauty & spa</option>
+                    <option value="Head massage" id="head_massage">Head massage</option>
+                    <option value="Shaving & Facial" id="shaving_facial">Shaving & Facial</option>
+                    <option value="Hair Color" id="hair_color">Hair Color</option>
                   </select>
                 </div>
               
                 <input type="date" name="date" required class="input-field date">
-                <textarea name="message" placeholder="Write Message" required class="input-field"></textarea>
+                <textarea name="message" placeholder="Write Message" required class="input-field" id="write_message"></textarea>
               
                 <button type="submit" class="form-btn">
-                  <span class="span">Appointment Now</span>
+                  <span class="span" id="appointment_now">Appointment Now</span>
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </button>
               </form>
@@ -877,16 +878,16 @@
           <div class="title-wrapper">
 
             <div>
-              <h2 class="h2 section-title">Our products</h2>
+              <h2 class="h2 section-title" id="product_title">Our products</h2>
 
-              <p class="section-text">
+              <p class="section-text" id="product_text">
                 Our top-quality grooming products ensure every haircut, shave, and treatment is a perfect experience. Explore our range of products.
 
               </p>
             </div>
 
             <a href="./products.html" class="btn has-before">
-              <span class="span">Explore More Products</span>
+              <span class="span" id="explore_products">Explore More Products</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </a>
@@ -996,7 +997,7 @@
         - #TESTIMONIALS
       -->
     <section class="section testimonials" id="testimonials" aria-label="testimonials">
-        <h2 class="testimonials-heading">What Our Clients Say</h2>
+        <h2 class="testimonials-heading" id="testimonials_title">What Our Clients Say</h2>
         <div class="testimonials">
             <div class="testimonial-card">
                 <img src="https://imageio.forbes.com/specials-images/imageserve/663e595b4509f97fdafb95f5/0x0.jpg?format=jpg&crop=383,383,x1045,y23,safe&height=416&width=416&fit=bounds" 
@@ -1232,7 +1233,7 @@
 
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; 2025 <a href="#" class="copyright-link">Abdessamia Ennaji</a>. All Rights Reserved.
+          &copy; 2025 <a href="https://www.linkedin.com/in/abdessamia-ennaji-6b3679222/" class="copyright-link">Abdessamia Ennaji</a>. All Rights Reserved.
         </p>
       </div>
 
