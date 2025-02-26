@@ -574,7 +574,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         // Change direction of text if language is Arabic
-        header.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        // header.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        content.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    
     }
     
 });
