@@ -423,23 +423,15 @@ body {
   --section-padding: 100px;
   position: relative;
   padding-block-start: 0; 
-  background-position: left;
-  overflow: visible; /* Ensure buttons and dots are visible */
-  min-height: 100vh; /* Maintain full viewport height, adjust if needed to auto */
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero::before {
   inset: 0;
   background-color: var(--rich-black-fogra-39_50);
   mix-blend-mode: multiply;
-  z-index: -1; /* Ensure this stays below buttons and dots */
-}
-
-.hero-text {
-  position: relative;
-
-  color: var(--white);
-  margin-block: 15px 40px;
+  z-index: 1;
 }
 
 .hero-bg {
@@ -447,21 +439,20 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Match the hero’s height */
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -2; /* Ensure this stays below everything else */
+  z-index: 0;
 }
 
 /* Slider Styles */
 .slider-container {
   position: relative;
   width: 100%;
-  height: auto; 
-  overflow: visible; 
-  margin-top: 0; 
-  min-height: 500px; 
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .slide {
@@ -469,10 +460,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto; 
+  height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide.active {
@@ -480,12 +473,25 @@ body {
 }
 
 .slide-content {
-  position: relative;
-  z-index: 2; 
-  padding-block-start: calc(var(--section-padding) + 20px); /* Maintain padding for content */
-  padding-block-end: 0; /* Remove bottom padding to allow dots to sit at the bottom */
-  max-width: 1200px; /* Center and limit content width for better alignment */
-  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 100%;
+  z-index: 3;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.hero-text {
+  color: var(--white);
+  margin-bottom: 40px;
+  font-size: var(--fs-18);
 }
 
 .slider-btn {
@@ -495,28 +501,29 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   color: var(--white);
   font-size: 24px;
-  padding: 15px 20px; 
+  padding: 15px 20px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 9999; 
+  z-index: 5;
+  border-radius: var(--radius-5);
 }
 
 .slider-btn:hover {
   background-color: var(--indian-yellow);
 }
 
-.prev { left: 30px; } /* Increase left margin for better spacing */
-.next { right: 30px; } /* Increase right margin for better spacing */
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .slider-dots {
   position: absolute;
-  bottom: 20px; /* Adjust this value as needed */
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
-  z-index: 2; /* Ensure it stays above the background but below the text */
+  gap: 12px;
+  z-index: 5;
 }
 
 .dot {
@@ -536,46 +543,47 @@ body {
 @media (min-width: 768px) {
   .slider-btn {
     font-size: 30px;
-    padding: 20px 25px; /* Increase padding for larger screens */
+    padding: 20px 25px;
   }
   
-  .slide-content {
-    padding-block-start: calc(var(--section-padding) + 40px); /* Increase padding for larger screens */
-    padding-block-end: 0; /* Remove bottom padding on larger screens */
+  .prev { left: 40px; }
+  .next { right: 40px; }
+  
+  .hero-title {
+    font-size: var(--fs-40);
   }
-
-  .prev { left: 50px; } /* Increase spacing on larger screens */
-  .next { right: 50px; } /* Increase spacing on larger screens */
+  
+  .hero-text {
+    font-size: var(--fs-24);
+  }
+  
   .slider-dots {
-    bottom: 0; /* Maintain at the bottom on larger screens */
-    padding-bottom: 30px; /* Increase padding for larger screens if needed */
-    gap: 20px; /* Increase gap between dots on larger screens */
+    bottom: 40px;
+    gap: 15px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .slider-btn {
-    padding: 10px 15px; /* Reduce padding on mobile for smaller screens */
-    font-size: 20px; /* Reduce font size on mobile */
+    padding: 10px 15px;
+    font-size: 20px;
   }
-
-  .slide-content {
-    padding-block-start: calc(var(--section-padding) + 10px); /* Reduce padding on mobile */
-    padding-block-end: 0; /* Remove bottom padding on mobile */
+  
+  .hero-title {
+    font-size: var(--fs-30);
   }
-
-  .prev { left: 10px; } /* Reduce spacing on mobile */
-  .next { right: 10px; } /* Reduce spacing on mobile */
-  .slider-dots {
-    bottom: 0; /* Maintain at the bottom on mobile */
-    padding-bottom: 10px; /* Reduce padding on mobile if needed */
-    gap: 10px; /* Reduce gap between dots on mobile */
+  
+  .hero-text {
+    font-size: var(--fs-18);
   }
-}
-
-/* Ensure the hero height fits its content but doesn’t overflow */
-.hero {
-  max-height: none; /* Remove any fixed height constraints */
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }
 }
 
 

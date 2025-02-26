@@ -98,6 +98,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const quote3 = document.getElementById('quote3');
     const author3 = document.getElementById('author3');
 
+    // ========================================================================
+    // FOOTER ELEMENTS
+    // ========================================================================
+    // const logo = document.getElementById('logo');
+    // const footer_title = document.getElementById('footer_title');
+    // const subscribe_now = document.getElementById('subscribe_now');
+    // const quick_links = document.getElementById('quick_links');
+    // const our_services = document.getElementById('our_services');
+    // const meet_our_team = document.getElementById('meet_our_team');
+    // const our_portfolio = document.getElementById('our_portfolio');
+    // const need_a_career = document.getElementById('need_a_career');
+    // const news_and_blog = document.getElementById('news_and_blog');
+    // const footer_services = document.getElementById('footer_services');
+    // const footer_hair_cutting = document.getElementById('footer_hair_cutting');
+    // const footer_shaving_and_design = document.getElementById('footer_shaving_and_design');
+    // const footer_hair_colors = document.getElementById('footer_hair_colors');
+    // const footer_beauty_and_spa = document.getElementById('footer_beauty_and_spa');
+    // const footer_body_massages = document.getElementById('footer_body_massages');
 
     // ========================================================================
     // SECTION: Translation Data
@@ -185,6 +203,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 quote3 : '"Simply the best! High-quality work and great customer support."',
                 author3 : '- Sophia Martinez',
             },
+            footer: {
+                logo : 'Barber Kech',
+                footer_title : 'Barber Kech',
+                subscribe_now : 'Subscribe Now',
+                quick_links : 'Quick Links',
+                our_services : 'Our Services',
+                meet_our_team : 'Meet Our Team',
+                our_portfolio : 'Our Portfolio',
+                need_a_career : 'Need a Career?',
+                news_and_blog : 'News & Blog',
+                footer_services : 'Services',
+                footer_hair_cutting : 'Hair Cutting',
+                footer_shaving_and_design : 'Shaving & Design',
+                footer_hair_colors : 'Hair Colors',
+                footer_beauty_and_spa : 'Beauty & Spa',
+                footer_body_massages : 'Body Massages',
+            },
 
         },
         fr: {
@@ -269,6 +304,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 quote3: '"Tout simplement le meilleur ! Travail de qualité et excellent service client."',
                 author3: '- Sophia Martinez',
             },
+            footer: {
+                logo: 'Barber Kech',
+                footer_title: 'Barber Kech',
+                subscribe_now: 'Abonnez-vous maintenant',
+                quick_links: 'Liens rapides',
+                our_services: 'Nos services',
+                meet_our_team: 'Rencontrez notre équipe',
+                our_portfolio: 'Notre portfolio',
+                need_a_career: 'Besoin d’une carrière ?',
+                news_and_blog: 'Actualités & Blog',
+                footer_services: 'Services',
+                footer_hair_cutting: 'Coupe de cheveux',
+                footer_shaving_and_design: 'Rasage & Design',
+                footer_hair_colors: 'Colorations capillaires',
+                footer_beauty_and_spa: 'Beauté & Spa',
+                footer_body_massages: 'Massages corporels',
+            },
+            
             
             
             
@@ -364,6 +417,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 quote3: '"ببساطة الأفضل! عمل عالي الجودة ودعم عملاء رائع."',
                 author3: '- صوفيا مارتينيز',
             },
+            footer: {
+                logo: 'Barber Kech',
+                footer_title: 'Barber Kech',
+                subscribe_now: 'اشترك الآن',
+                quick_links: 'روابط سريعة',
+                our_services: 'خدماتنا',
+                meet_our_team: 'تعرف على فريقنا',
+                our_portfolio: 'معرض أعمالنا',
+                need_a_career: 'هل تبحث عن وظيفة؟',
+                news_and_blog: 'الأخبار والمدونة',
+                footer_services: 'الخدمات',
+                footer_hair_cutting: 'قص الشعر',
+                footer_shaving_and_design: 'الحلاقة والتصميم',
+                footer_hair_colors: 'صبغات الشعر',
+                footer_beauty_and_spa: 'الجمال والمنتجع الصحي',
+                footer_body_massages: 'تدليك الجسم',
+            },
+            
 
             
             
@@ -484,6 +555,21 @@ document.addEventListener('DOMContentLoaded', function() {
         author3.textContent = translations[lang].testimonials.author3;
 
         //FOOTER ELEMENTS
+        // logo.textContent = translations[lang].footer.logo;
+        // footer_title.textContent = translations[lang].footer.footer_title;
+        // subscribe_now.textContent = translations[lang].footer.subscribe_now;
+        // quick_links.textContent = translations[lang].footer.quick_links;
+        // our_services.textContent = translations[lang].footer.our_services;
+        // meet_our_team.textContent = translations[lang].footer.meet_our_team;
+        // our_portfolio.textContent = translations[lang].footer.our_portfolio;
+        // need_a_career.textContent = translations[lang].footer.need_a_career;
+        // news_and_blog.textContent = translations[lang].footer.news_and_blog;
+        // footer_services.textContent = translations[lang].footer.footer_services;
+        // footer_hair_cutting.textContent = translations[lang].footer.footer_hair_cutting;
+        // footer_shaving_and_design.textContent = translations[lang].footer.footer_shaving_and_design;
+        // footer_hair_colors.textContent = translations[lang].footer.footer_hair_colors;
+        // footer_beauty_and_spa.textContent = translations[lang].footer.footer_beauty_and_spa;
+        // footer_body_massages.textContent = translations[lang].footer.footer_body
         
 
 
