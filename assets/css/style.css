@@ -498,7 +498,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   color: var(--white);
   font-size: 24px;
   padding: 15px 20px;
@@ -509,9 +509,9 @@ body {
   border-radius: var(--radius-5);
 }
 
-.slider-btn:hover {
+/* .slider-btn:hover {
   background-color: var(--indian-yellow);
-}
+} */
 
 .prev { left: 20px; }
 .next { right: 20px; }
