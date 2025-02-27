@@ -817,7 +817,8 @@ body {
 .appoin-card .card-banner { display: none; }
 
 .appoin-card .card-content {
-  background-color: var(--indian-yellow);
+  /* background-color: var(--indian-yellow); */
+  background-color: var(--rich-black-fogra-39);
   padding: 80px 15px;
   text-align: center;
   color: var(--white);
