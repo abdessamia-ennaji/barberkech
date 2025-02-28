@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load cart from localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Set initial quantity to 1 for all products
+    document.querySelectorAll('.quantity').forEach(span => {
+        if (parseInt(span.textContent) === 0) {
+            span.textContent = 1;
+        }
+    });
+    
     updateCartDisplay();
     updateQuantityDisplays();
 
@@ -31,11 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (this.classList.contains('plus')) {
                 currentQuantity++;
-            } else if (currentQuantity > 0) {
+            } else if (currentQuantity > 1) { // Changed from 0 to 1 to maintain minimum of 1
                 currentQuantity--;
             }
 
             quantitySpan.textContent = currentQuantity;
+            quantitySpan.dataset.userChanged = true; // Mark as user-changed
         });
     });
 
@@ -50,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (quantityToAdd > 0) {
                 addToCart(productName, productPrice, productImage, quantityToAdd);
-                quantitySpan.textContent = 0; // Reset quantity after adding to cart
+                quantitySpan.textContent = 1; // Reset to 1 instead of 0
+                quantitySpan.dataset.userChanged = false; // Reset user-changed flag
                 updateCartDisplay();
             }
         });
@@ -162,8 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.quantity').forEach(span => {
             const productName = span.dataset.name;
             const cartItem = cart.find(item => item.name === productName);
-            if (parseInt(span.textContent) === 0 || !span.dataset.userChanged) {
-                span.textContent = cartItem ? cartItem.quantity : 0;
+            
+            // Only update if not manually changed by user
+            if (!span.dataset.userChanged) {
+                // Use quantity from cart if it exists, otherwise default to 1
+                span.textContent = cartItem ? cartItem.quantity : 1;
             }
         });
     }
