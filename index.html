@@ -42,7 +42,29 @@
     - preload images
   -->
   <!-- <link rel="preload" as="image" href="./assets/images/hero-banner.jpg"> -->
-
+  <style>
+    @media (max-width: 574px) {
+      #explore-products-btn,
+      #explore-gallery-btn {
+        display: flex;
+        justify-content: center; /* Center contents horizontally */
+        width: 100%; /* Full width for centering in parent */
+        flex-wrap: nowrap; /* Prevent wrapping of flex items */
+        white-space: nowrap; /* Keep text and icon on one line */
+      }
+      .title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      /* Ensure icon stays inline */
+      #explore-products-btn ion-icon,
+      #explore-gallery-btn ion-icon {
+        flex-shrink: 0;
+        margin-left: 10px; 
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -652,7 +674,7 @@
               </p>
             </div>
 
-            <a href="./gallery.html" class="btn has-before">
+            <a href="./gallery.html" class="btn has-before" id="explore-gallery-btn">
               <span class="span" id="gallery_explore">Explore More Gallery</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -871,11 +893,11 @@
               </p>
             </div>
 
-            <a href="./products.html" class="btn has-before">
+            <a href="./products.html" class="btn has-before" id="explore-products-btn">
               <span class="span" id="explore_products">Explore More Products</span>
-
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </a>
+           
 
           </div>
 
