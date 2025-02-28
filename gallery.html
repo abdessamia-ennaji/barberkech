@@ -264,10 +264,12 @@
       <article>
 
         <section class="section hero has-before has-bg-image" id="home" aria-label="home"
-            style="background-image: url('./assets/images/gallery-background.webp'); 
+            style="
+                background-image: url('./assets/images/gallery-background.webp'); 
                 background-size: cover; 
                 background-position: center; 
                 display: flex; 
+                background-color: red;
                 align-items: center; 
                 justify-content: center; 
                 height: 100vh; 
@@ -276,15 +278,29 @@
             <div class="container" style="z-index:9999;">
                 <h1 class="h1 hero-title">Gallery</h1>
                 <p class="hero-text">
-                    A showcase of precision, style, and craftsmanship. Find your next look!                </p>
+                    A showcase of precision, style, and craftsmanship. Find your next look!           
+                </p>
             </div>
-
+            <img src="./assets/images/scroll-down.svg" style="
+                z-index:9999;
+                position: absolute;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 9999;
+                filter: invert(1);
+                width: 80px; 
+                height: auto;
+                cursor: pointer;
+                animation: bounce 1.5s infinite ease-in-out;
+                "
+            alt="">
         </section>
 
   
         <div class="gallery">
             <img src="./assets/images/gallery-1.webp" loading="lazy" alt="" data-caption="">
-            <img src="./assets/images/gallery-2.webp" loading="lazy" alt="" data-caption="">
+            <!-- <img src="./assets/images/gallery-2.webp" loading="lazy" alt="" data-caption=""> -->
             <img src="./assets/images/gallery-3.webp" loading="lazy" alt="" data-caption="Sunset Valley">
             <img src="./assets/images/gallery-4.webp" loading="lazy" alt="" data-caption="">
             <img src="./assets/images/gallery/gallery1.webp" loading="lazy"  alt="" data-caption="">
@@ -296,7 +312,7 @@
             <img src="./assets/images/gallery/gallery7.webp" loading="lazy" alt="" data-caption="">
             <img src="./assets/images/gallery/gallery8.webp" loading="lazy" alt="" data-caption="">
             <img src="./assets/images/gallery/gallery9.webp" loading="lazy" alt="" data-caption="">
-            <img src="./assets/images/gallery/gallery10.webp" loading="lazy" alt="" data-caption="">
+            <!-- <img src="./assets/images/gallery/gallery10.webp" loading="lazy" alt="" data-caption=""> -->
             <img src="./assets/images/gallery/gallery11.webp" loading="lazy" alt="" data-caption="">
             <img src="./assets/images/gallery/gallery12.webp" loading="lazy" alt="" data-caption="">
             <img src="./assets/images/gallery/gallery13.webp" loading="lazy" alt="" data-caption="">
