@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // PRICING ELEMENTS
     // ========================================================================
-    const pricing_title = document.getElementById('pricing_title');
-    const pricing_text = document.getElementById('pricing_text');
-    const all_pricing = document.getElementById('all_pricing');
-    const beauty_spa = document.getElementById('beauty_spa');
-    const body_treatements = document.getElementById('body_treatements');
-    const face_washing = document.getElementById('face_washing');
-    const meditations = document.getElementById('meditations');
-    const shaving = document.getElementById('shaving');
+    // const pricing_title = document.getElementById('pricing_title');
+    // const pricing_text = document.getElementById('pricing_text');
+    // const all_pricing = document.getElementById('all_pricing');
+    // const beauty_spa = document.getElementById('beauty_spa');
+    // const body_treatements = document.getElementById('body_treatements');
+    // const face_washing = document.getElementById('face_washing');
+    // const meditations = document.getElementById('meditations');
+    // const shaving = document.getElementById('shaving');
     // ========================================================================
     // GALLERY ELEMENTS
     // ========================================================================

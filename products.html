@@ -212,37 +212,43 @@
       <article>
 
         <section class="section hero has-before has-bg-image" id="home" aria-label="home"
-            style="background-image: url('./assets/images/products/product-background.webp'); 
-                background-size: cover; 
-                background-position: center; 
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                height: 100vh; 
-                text-align: center;">
+    style="
+        background-image: url('./assets/images/products/product-background.webp'); 
+        background-size: cover; 
+        background-position: center; 
+        display: flex; 
+        background-color: red;
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh; 
+        text-align: center;">
 
-            <div class="container" style="z-index:9999;">
-                <h1 class="h1 hero-title">Products</h1>
-                <p class="hero-text">
-                  Premium barber products for a sharp, confident look. Style, precision, and care in every detail.              
-                </p>
-            </div>
-            <img src="./assets/images/scroll-down.svg" style="
-                z-index:9999;
-                position: absolute;
-                bottom: 80px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 9999;
-                filter: invert(1);
-                width: 80px; 
-                height: auto;
-                cursor: pointer;
-                animation: bounce 1.5s infinite ease-in-out;
-                "
-            alt="">
-
-        </section>
+    <div class="container" style="
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;">
+        <h1 class="h1 hero-title" style="margin: 0;">Products</h1>
+        <p class="hero-text" style="margin: 0;">
+            Premium barber products for a sharp, confident look. Style, precision, and care in every detail.              
+        </p>
+    </div>
+    
+    <img src="./assets/images/scroll-down.svg" style="
+        z-index: 9999;
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: invert(1);
+        width: 80px; 
+        height: auto;
+        cursor: pointer;
+        animation: bounce 1.5s infinite ease-in-out;"
+    alt="">
+</section>
 
         <div class="gallery">
 

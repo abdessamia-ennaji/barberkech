@@ -279,26 +279,31 @@
                 justify-content: center; 
                 height: 100vh; 
                 text-align: center;">
-
-            <div class="container" style="z-index:9999;">
-                <h1 class="h1 hero-title">Gallery</h1>
-                <p class="hero-text">
+        
+            <div class="container" style="
+                z-index: 9999;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0;">
+                <h1 class="h1 hero-title" style="margin: 0;">Gallery</h1>
+                <p class="hero-text" style="margin: 0;">
                     A showcase of precision, style, and craftsmanship. Find your next look!           
                 </p>
             </div>
+            
             <img src="./assets/images/scroll-down.svg" style="
-                z-index:9999;
+                z-index: 9999;
                 position: absolute;
                 bottom: 80px;
                 left: 50%;
                 transform: translateX(-50%);
-                z-index: 9999;
                 filter: invert(1);
                 width: 80px; 
                 height: auto;
                 cursor: pointer;
-                animation: bounce 1.5s infinite ease-in-out;
-                "
+                animation: bounce 1.5s infinite ease-in-out;"
             alt="">
         </section>
 
