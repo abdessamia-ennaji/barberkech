@@ -221,56 +221,17 @@
         - #HERO
       -->
 
-
-      <section class="section hero has-before has-bg-image" id="home" aria-label="home">
-        <div class="hero-bg" style="background-image: url('./assets/images/slider-images/hero-banner.webp')"></div>
-        <div class="slider-container">
-          
-          <div class="slide">
-            <div class="container slide-content">
-              <h1 class="h1 hero-title" id="slide_title1">Mobile Barber</h1>
-              <p class="hero-text" id="slide_text1">Professional Haircuts Anytime, Anywhere</p>
-              <div class="slider-dots">
-                <span class="dot" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-              </div>
+      <section class="section " style="margin-top: 2rem;">
+        <div class="hero-content-container">
+            <div class="hero-text-block">
+                <h2>Mobile barber service for today’s gentleman in the heart of Marrakech</h2>
+                <a href="#">— LEARN MORE</a>
             </div>
-          </div>
-
-          
-          <div class="slide">
-            <div class="container slide-content">
-              <h1 class="h1 hero-title" id="slide_title2">Premium Hair Care</h1>
-              <p class="hero-text" id="slide_text2">Experience Luxury at Your Doorstep</p>
-              <div class="slider-dots">
-                <span class="dot" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-              </div>
+            <div class="hero-image-slider js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "left", "contain": true, "pauseAutoPlayOnHover": false, "pageDots": true }'>
+                <div class="hero-slider-item"><img src="./assets/images/slider-images/hero-banner.webp" loading="lazy" alt="Slide 1"></div>
+                <div class="hero-slider-item"><img src="./assets/images/slider-images/hero-banner2.webp" loading="lazy" alt="Slide 2"></div>
+                <div class="hero-slider-item"><img src="./assets/images/slider-images/hero-banner3.webp" loading="lazy" alt="Slide 3"></div>
             </div>
-          </div>
-
-          
-          <div class="slide">
-            <div class="container slide-content">
-              <h1 class="h1 hero-title" id="slide_title3">Expert Stylists</h1>
-              <p class="hero-text" id="slide_text3">Quality Service On Your Schedule</p>
-              <div class="slider-dots">
-                <span class="dot" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slider Controls -->
-          <button class="slider-btn prev" aria-label="Previous slide">
-            <ion-icon name="chevron-back-outline"></ion-icon>
-          </button>
-          <button class="slider-btn next" aria-label="Next slide">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-          </button>
         </div>
       </section>
 
@@ -288,7 +249,7 @@
       <section class="section service" id="services" aria-label="services">
         <div class="container">
 
-          <h2 class="h2 section-title text-center" id="service_title">Service We Provide</h2>
+          <h2 class="h2 section-title text-center" style="color: white;" id="service_title">Service We Provide</h2>
 
           <p class="section-text text-center" id="service_text">
             Experience premium grooming wherever you are. Our mobile barbers bring top-notch cuts and styling right to your door.
@@ -666,7 +627,7 @@
           <div class="title-wrapper">
 
             <div>
-              <h2 class="h2 section-title" id="gallery_title">Latest Photo Gallery</h2>
+              <h2 class="h2 section-title" style="color: white;" id="gallery_title">Latest Photo Gallery</h2>
 
               <p class="section-text" id="gallery_text">
                 Explore our latest work and see the precision and style we bring to every haircut, shave, and grooming session.
@@ -795,8 +756,9 @@
           <div class="appoin-card">
 
             <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
-              <img src="./assets/images/appoin-banner-1.webp" width="250" height="774" loading="lazy" alt=""
-                class="img-cover">
+              <!-- <img src="./assets/images/appoin-banner-1.webp" width="250" height="774" loading="lazy" alt=""
+                class="img-cover"> -->
+                <div class="img-cover" style="background-color: #0d0d0d; width: 250px; height: 774px;"></div>
             </figure>
 
             <div class="card-content">
@@ -867,8 +829,9 @@
             </div>
 
             <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
-              <img src="./assets/images/appoin-banner-2.webp" width="250" height="774" loading="lazy" alt=""
-                class="img-cover">
+              <!-- <img src="./assets/images/appoin-banner-2.webp" width="250" height="774" loading="lazy" alt=""
+                class="img-cover"> -->
+                <div class="img-cover" style="background-color: #0d0d0d; width: 250px; height: 774px;"></div>
             </figure>
 
           </div>
@@ -885,7 +848,7 @@
           <div class="title-wrapper">
 
             <div>
-              <h2 class="h2 section-title" id="product_title">Our products</h2>
+              <h2 class="h2 section-title" style="color: white;" id="product_title">Our products</h2>
 
               <p class="section-text" id="product_text">
                 Our top-quality grooming products ensure every haircut, shave, and treatment is a perfect experience. Explore our range of products.
@@ -1004,7 +967,7 @@
         - #TESTIMONIALS
       -->
     <section class="section testimonials" id="testimonials" aria-label="testimonials">
-        <h2 class="testimonials-heading" id="testimonials_title">What Our Clients Say</h2>
+        <h2 class="h2 section-title text-center" style="color: white;" id="testimonials_title">What Our Clients Say</h2>
         <div class="testimonials">
             <div class="testimonial-card">
                 <img src="./assets/images/testimonials/testimonial1.webp" 
@@ -1273,6 +1236,7 @@
   <!-- 
     - custom js link
   -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="./assets/js/languagePopUp.js" defer></script>
   <script src="./assets/js/slider.js" defer></script>
   <script src="./assets/js/script.js" defer></script>

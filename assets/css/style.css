@@ -176,7 +176,8 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background-color: #0d0d0d;
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 2;
@@ -329,6 +330,7 @@ body {
   top: 45px;
   left: 0;
   width: 100%;
+  background-color: var(--rich-black-fogra-39);
   padding-block: 10px;
   z-index: 4;
 }
@@ -337,6 +339,7 @@ body {
   position: fixed;
   top: 0;
   background-color: var(--rich-black-fogra-39);
+  /* background-color: red; */
   transform: translateY(-100%);
   animation: slideIn 0.5s ease forwards;
 }
@@ -419,175 +422,149 @@ body {
   #HERO
 \*-----------------------------------*/
 
-.hero {
-  --section-padding: 100px;
-  position: relative;
-  padding-block-start: 0; 
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-.hero::before {
-  inset: 0;
-  background-color: var(--rich-black-fogra-39_50);
-  mix-blend-mode: multiply;
-  z-index: 1;
-}
-
-.hero-bg {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
-/* Slider Styles */
-.slider-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.hero-content-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column-reverse; /* Stack text below slider on mobile */
+  gap: 20px; /* Increased from 1% to a fixed value for consistency */
+  width: 100%;
+  max-width: 1200px; /* Optional: limits overall width on large screens */
+  margin: 0 auto; /* Centers the container */
+  margin-top: 5px;
 }
 
-.slide.active {
-  opacity: 1;
-}
-
-.slide-content {
+.hero-text-block {
+  flex: 0 0 auto; /* Keeps flexibility */
+  color: white;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns content (text) to the left */
+  text-align: left; /* Ensures text inside elements is left-aligned */
+  height: 400px;
+  box-sizing: border-box;
+}
+
+
+.hero-text-block h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-text-block a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-image-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.hero-slider-item {
+  width: 90%; /* Default for desktop */
+  height: 400px; /* Default for desktop */
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  max-width: 100%;
-  z-index: 3;
+  margin-right: 2%;
+  overflow: hidden;
 }
 
-.hero-title {
-  margin-bottom: 20px;
-  color: var(--white);
+.hero-slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container without distortion */
 }
 
-.hero-text {
-  color: var(--white);
-  margin-bottom: 40px;
-  font-size: var(--fs-18);
+/* Hide default Flickity buttons */
+.flickity-prev-next-button {
+  display: none !important;
 }
 
-.slider-btn {
+/* Flickity options for peeking */
+.flickity-slider {
+  left: 0;
+}
+
+/* Style the pagination rectangles */
+.flickity-page-dots {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  /* background-color: rgba(255, 255, 255, 0.2); */
-  color: var(--white);
-  font-size: 24px;
-  padding: 15px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 5;
-  border-radius: var(--radius-5);
+  bottom: 5px;
+  left: -5px;
+  width: auto;
+  text-align: left;
 }
 
-/* .slider-btn:hover {
-  background-color: var(--indian-yellow);
-} */
-
-.prev { left: 20px; }
-.next { right: 20px; }
-
-.slider-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  z-index: 5;
+.flickity-page-dots .dot {
+  width: 20px;
+  height: 6px;
+  opacity: 0.3;
+  background: var(--harvest-gold);
+  /* border-radius: 2px; */
+  margin: 0 8px;
+  transition: all 0.4s ease;
+  display: inline-block;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.flickity-page-dots .dot.is-selected {
+  width: 40px;
+  opacity: 1;
+  background: var(--harvest-gold);
 }
 
-.dot.active {
-  background-color: var(--indian-yellow);
-}
-
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  .slider-btn {
-    font-size: 30px;
-    padding: 20px 25px;
-  }
-  
-  .prev { left: 40px; }
-  .next { right: 40px; }
-  
-  .hero-title {
-    font-size: var(--fs-40);
-  }
-  
-  .hero-text {
-    font-size: var(--fs-24);
-  }
-  
-  .slider-dots {
-    bottom: 40px;
-    gap: 15px;
-  }
-  
-  .dot {
-    width: 15px;
-    height: 15px;
-  }
-}
-
+/* Media query for mobile (max-width: 767px) */
 @media (max-width: 767px) {
-  .slider-btn {
-    padding: 10px 15px;
-    font-size: 20px;
+  .hero-text-block {
+    padding: 15px; /* Slightly less padding on mobile */
+    height: auto; /* Allow height to adjust to content */
+    min-height: 200px; /* Minimum height to prevent it from being too small */
   }
-  
-  .hero-title {
-    font-size: var(--fs-30);
+
+  .hero-image-slider {
+    width: 100%;
+    max-width: none; /* Full width on mobile */
   }
-  
-  .hero-text {
-    font-size: var(--fs-18);
+
+  .hero-slider-item {
+    width: 90%; /* Full width on mobile */
+    height: 56.25vw; /* 16:9 aspect ratio */
+    margin-right: 0; /* Remove right margin for full-width slides */
+    margin-right: 2%;
   }
-  
-  .prev { left: 10px; }
-  .next { right: 10px; }
 }
 
+/* Media query for desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  .hero-content-container {
+    flex-direction: row; /* Side by side on desktop */
+    align-items: center;
+  }
 
+  .hero-text-block {
+    height: 400px; /* Fixed height for desktop */
+    margin-right: 30px; /* Reduced from 40px for less gap */
+    padding: 20px; /* Consistent padding */
+    flex: 1; /* Allow it to take available space */
+  }
 
+  .hero-image-slider {
+    flex: 3; /* Allow slider to take available space */
+    width: 100%;
+    max-width: 800px;
+  }
+}
 
 
 /*-----------------------------------*\
@@ -912,7 +889,7 @@ textarea.input-field {
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--eerie-black-2);
+  /* background-color: var(--eerie-black-2); */
   padding-block-end: 30px;
 }
 
@@ -1138,10 +1115,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 600px;
+    max-width: 100%;
     z-index: 4;
-    background-color: var(--white);
-    border-radius: 0 0 20px 20px;
+    /* background-color: var(--white); */
+    /* border-radius: 0 0 20px 20px;  */
   }
 
   .header-top-item:first-child {
@@ -1157,7 +1134,8 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   }
 
   .header-top-item .item-title {
-    color: var(--eerie-black-1);
+    /* color: var(--eerie-black-1); */
+    color: var(--white);
     font-weight: var(--fw-500);
   }
 
@@ -1301,7 +1279,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
    * HEADER
    */
 
-  .header-top { max-width: 780px; }
+  .header-top { max-width: 100%; }
 
 
 
@@ -1391,7 +1369,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .nav-toggle-btn { display: none; }
 
-  .header-top { max-width: 1020px; }
+  .header-top { max-width: 100%; }
 
   .header-bottom { padding-block: 20px; }
 
@@ -1531,7 +1509,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
    * HEADER
    */
 
-  .header-top { max-width: 1260px; }
+  .header-top { max-width: 100%; }
 
   .header-top-list { gap: 30px; }
 
