@@ -525,6 +525,16 @@ body {
   background: var(--harvest-gold);
 }
 
+/* Remove focus outline on slider */
+.flickity-enabled:focus,
+.flickity-slider:focus,
+.hero-slider-item:focus,
+.hero-slider-item:active,
+.flickity-viewport:focus {
+  outline: none;
+}
+
+
 /* Media query for mobile (max-width: 767px) */
 @media (max-width: 767px) {
   .hero-text-block {
