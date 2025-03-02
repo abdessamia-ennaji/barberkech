@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // SLIDER ELEMENTS
     // ========================================================================
-    const slide_title1 = document.getElementById('slide_title1');
-    const slide_text1 = document.getElementById('slide_text1');
-    const slide_title2 = document.getElementById('slide_title2');
-    const slide_text2 = document.getElementById('slide_text2');
-    const slide_title3 = document.getElementById('slide_title3');
-    const slide_text3 = document.getElementById('slide_text3');
+    // const slide_title1 = document.getElementById('slide_title1');
+    // const slide_text1 = document.getElementById('slide_text1');
+    // const slide_title2 = document.getElementById('slide_title2');
+    // const slide_text2 = document.getElementById('slide_text2');
+    // const slide_title3 = document.getElementById('slide_title3');
+    // const slide_text3 = document.getElementById('slide_text3');
     // ========================================================================
     // SERVICE ELEMENTS
     // ========================================================================
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const write_message = document.getElementById('write_message');
     const appointment_now = document.getElementById('appointment_now');
     // ========================================================================
-    // APPOINTMENT ELEMENTS
+    // PRODUCTS ELEMENTS
     // ========================================================================
     const product_title = document.getElementById('product_title');
     const product_text = document.getElementById('product_text');
@@ -486,12 +486,12 @@ document.addEventListener('DOMContentLoaded', function() {
         nav_appointment.textContent = translations[lang].header.nav_appointment;
     
         // SLIDER ELEMENTS
-        slide_title1.textContent = translations[lang].slider.slide_title1;
-        slide_text1.textContent = translations[lang].slider.slide_text1;
-        slide_title2.textContent = translations[lang].slider.slide_title2;
-        slide_text2.textContent = translations[lang].slider.slide_text2;
-        slide_title3.textContent = translations[lang].slider.slide_title3;
-        slide_text3.textContent = translations[lang].slider.slide_text3;
+        // slide_title1.textContent = translations[lang].slider.slide_title1;
+        // slide_text1.textContent = translations[lang].slider.slide_text1;
+        // slide_title2.textContent = translations[lang].slider.slide_title2;
+        // slide_text2.textContent = translations[lang].slider.slide_text2;
+        // slide_title3.textContent = translations[lang].slider.slide_title3;
+        // slide_text3.textContent = translations[lang].slider.slide_text3;
     
         // SERVICE ELEMENTS
         service_title.textContent = translations[lang].service.service_title;

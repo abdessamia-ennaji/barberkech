@@ -470,6 +470,7 @@ body {
   overflow: hidden;
   position: relative;
   padding-bottom: 30px;
+  background-color: #0d0d0d; /* Remove if it doesn't work THIS IS JUST A TEST */
 }
 
 .hero-slider-item {
