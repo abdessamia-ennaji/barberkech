@@ -670,7 +670,7 @@ body {
 }
 
 .pricing-tab-container {
-  background-color: var(--white);
+  background-color: #0d0d0d;
   padding: 40px 5px;
 }
 
@@ -683,14 +683,15 @@ body {
 }
 
 .filter-btn {
-  color: var(--eerie-black-1);
+  /* color: var(--eerie-black-1); */
+  color: var(--white);
   font-family: var(--ff-oswald);
   font-size: var(--fs-14);
   font-weight: var(--fw-600);
   text-transform: uppercase;
   min-width: 130px;
   padding-block: 12px;
-  border: 1px solid var(--platinum);
+  border: 1px solid var(--white_10);
   transition: var(--transition-1);
 }
 
@@ -699,7 +700,8 @@ body {
 .filter-btn.active {
   background-color: var(--indian-yellow);
   border-color: var(--indian-yellow);
-  color: var(--white);
+  /* color: var(--white); */
+  color: #0d0d0d;
 }
 
 .pricing .grid-list { padding-inline: 20px; }
@@ -739,10 +741,12 @@ body {
   --fs-24: 2rem;
   margin-block-end: 8px;
   text-align: left; /* Ensure text starts from the left */
+  color: white;
 }
 
 .pricing-card .card-text {
   text-align: left; /* Align paragraph text to the left */
+  color: var(--white_50);
 }
 
 .pricing-card .card-price {
