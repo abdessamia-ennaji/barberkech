@@ -704,6 +704,11 @@ body {
   color: #0d0d0d;
 }
 
+.filter-btn.active .icon {
+  background-color: yellow;
+}
+
+
 .pricing .grid-list { padding-inline: 20px; }
 
 .pricing .grid-list > li.active { animation: popup 0.75s ease forwards; }

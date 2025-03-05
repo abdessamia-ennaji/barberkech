@@ -391,7 +391,9 @@
               <li>
                 <button class="filter-btn active" data-filter-btn="all">
                   <div class="btn-icon">
-                    <i class="flaticon-beauty-salon" aria-hidden="true"></i>
+                    <!-- <i class="flaticon-beauty-salon" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/salon.png'); mask-image: url('./assets/images/icons-png/salon.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
+
                   </div>
 
                   <p class="btn-text" id="all_pricing">All Pricing</p>
@@ -400,55 +402,73 @@
 
               <!-- ALL OPTIONS  -->
                
+              
+
               <li>
-                <button class="filter-btn" data-filter-btn="beauty-spa">
+                <button class="filter-btn" data-filter-btn="gentleman">
                   <div class="btn-icon">
-                    <i class="flaticon-relax" aria-hidden="true"></i>
+                    <!-- <i class="flaticon-massage" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/gentleman.svg'); mask-image: url('./assets/images/icons-png/gentleman.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
                   </div>
 
-                  <p class="btn-text" id="beauty_spa">Beauty & Spa</p>
+                  <p class="btn-text">GENTLEMAN</p>
                 </button>
               </li>
 
               <li>
-                <button class="filter-btn" data-filter-btn="head-treatments">
+                <button class="filter-btn" data-filter-btn="traitement">
                   <div class="btn-icon">
-                    <i class="flaticon-massage" aria-hidden="true"></i>
-                    <!-- <img src="./assets/images/head-massage.svg" alt="" style="display: block; height: 55px; line-height: 1;margin-block-end: 5px;"> -->
+                    <!-- <i class="flaticon-spa" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/traitement.svg'); mask-image: url('./assets/images/icons-png/traitement.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
 
                   </div>
 
-                  <p class="btn-text">Hair treatement</p>
+                  <p class="btn-text" >Traitement</p>
                 </button>
               </li>
 
               <li>
-                <button class="filter-btn" data-filter-btn="face-washing">
+                <button class="filter-btn" data-filter-btn="facial-care">
                   <div class="btn-icon">
-                    <i class="flaticon-spa" aria-hidden="true"></i>
+                    <!-- <i class="flaticon-yoga" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/FacialCare.svg'); mask-image: url('./assets/images/icons-png/FacialCare.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
                   </div>
 
-                  <p class="btn-text" >Face Treatement</p>
+                  <p class="btn-text" >Facial Care</p>
                 </button>
               </li>
 
               <li>
-                <button class="filter-btn" data-filter-btn="meditations">
+                <button class="filter-btn" data-filter-btn="coloring">
                   <div class="btn-icon">
-                    <i class="flaticon-yoga" aria-hidden="true"></i>
+                    <!-- <i class="flaticon-razor-blade" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/coloring.svg'); mask-image: url('./assets/images/icons-png/coloring.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
+
                   </div>
 
-                  <p class="btn-text" >Head massage</p>
+                  <p class="btn-text" >coloring</p>
                 </button>
               </li>
 
-              <li>
-                <button class="filter-btn" data-filter-btn="shaving">
+              <!-- <li>
+                <button class="filter-btn" data-filter-btn="manicure_and_pedicure">
                   <div class="btn-icon">
                     <i class="flaticon-razor-blade" aria-hidden="true"></i>
                   </div>
 
-                  <p class="btn-text" >Shaving</p>
+                  <p class="btn-text" >Manicure & Pedicure</p>
+                </button>
+              </li> -->
+
+              <li>
+                <button class="filter-btn" data-filter-btn="gentlekids">
+                  <div class="btn-icon">
+                    <!-- <i class="flaticon-relax" aria-hidden="true"></i> -->
+                    <div class="icon" style="width: 60px; height: 60px; background-color: white; -webkit-mask-image: url('./assets/images/icons-png/gentlekids.svg'); mask-image: url('./assets/images/icons-png/gentlekids.svg'); -webkit-mask-size: cover; mask-size: cover; display: block; margin: 0 auto 5px auto;"></div>
+
+                  </div>
+
+                  <p class="btn-text" id="beauty_spa">Gentlekids (-13 years)</p>
                 </button>
               </li>
 
@@ -457,156 +477,280 @@
             <!-- ALL ITEMS -->
 
             <ul class="grid-list">
-
-              <li data-filter="shaving">
+              <!-- GENTLEMAN -->
+              <li data-filter="gentleman">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Hair Cutting & Fitting"
-                      class="img-cover">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Haircut" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Hair Cutting & Fitting</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Haircut</h3>
+                    <p class="card-text">Clean & stylish 30-40 minutes</p>
                   </div>
-
-                  <data class="card-price" value="89">89 DH</data>
-
+                  <data class="card-price" value="120">120 DH</data>
                 </div>
               </li>
-
-              <li data-filter="shaving">
+              
+              <li data-filter="gentleman">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-2.jpg" width="90" height="90" alt="Shaving & Facial"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/beard.jpg" width="90" height="90" alt="Beard" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Hair Traitment</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Beard</h3>
+                    <p class="card-text">Grooming & shaping 20-30 minutes</p>
                   </div>
-
-                  <data class="card-price" value="45">45DH</data>
-
+                  <data class="card-price" value="80">80 DH</data>
                 </div>
               </li>
-
-              <li data-filter="face-washing">
+              
+              <li data-filter="gentleman">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-3.jpg" width="90" height="90" alt="Hair Color & Wash"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Beard Trim.jpg" width="90" height="90" alt="Beard Trim" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Hair Color & Wash</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Beard Trim</h3>
+                    <p class="card-text">Precise trimming 15-20 minutes</p>
                   </div>
-
-                  <data class="card-price" value="35">35DH</data>
-
+                  <data class="card-price" value="50">50 DH</data>
                 </div>
               </li>
-
-              <li data-filter="head-treatments">
+              
+              <li data-filter="gentleman">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-4.jpg" width="90" height="90" alt="Body Massage"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Blowout.jpg" width="90" height="90" alt="Blowout" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Head Massage</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Blowout</h3>
+                    <p class="card-text">Smooth & voluminous 20-30 minutes</p>
                   </div>
-
-                  <data class="card-price" value="56">56DH</data>
-
+                  <data class="card-price" value="50">50 DH</data>
                 </div>
               </li>
-
-              <li data-filter="beauty-spa">
+              
+              <li data-filter="gentleman">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-5.jpg" width="90" height="90" alt="Beauty & Spa"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Zero Cut.jpg" width="90" height="90" alt="Zero Cut" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Skin Cleansing</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Zero Cut</h3>
+                    <p class="card-text">Close shave cut 20-30 minutes</p>
                   </div>
-
-                  <data class="card-price" value="27">27DH</data>
-
+                  <data class="card-price" value="70">70 DH</data>
                 </div>
               </li>
-
-              <li data-filter="face-washing">
+              <!--  TRAITEMENT -->
+              <li data-filter="traitement">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-6.jpg" width="90" height="90" alt="Facial & Face Wash"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Keratin.jpg" width="90" height="90" alt="Keratin" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Facial & Face Wash</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Keratin</h3>
+                    <p class="card-text">Smoothing treatment 60-90 minutes</p>
                   </div>
-
-                  <data class="card-price" value="63">63DH</data>
-
+                  <data class="card-price" value="500">500 DH</data>
                 </div>
               </li>
-
-              <li data-filter="head-treatments">
+              
+              
+              <li data-filter="traitement">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-7.jpg" width="90" height="90" alt="Backbone Massage"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Protein.jpg" width="90" height="90" alt="Protein" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Backbone Massage</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Protein</h3>
+                    <p class="card-text">Strengthening treatment 60-90 minutes</p>
                   </div>
-
-                  <data class="card-price" value="43">43DH</data>
-
+                  <data class="card-price" value="600">600 DH</data>
                 </div>
               </li>
-
-              <li data-filter="meditations">
+              
+                            
+              <li data-filter="traitement">
                 <div class="pricing-card">
-
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
-                    <img src="./assets/images/pricing-8.jpg" width="90" height="90" alt="Meditation & Massage"
-                      class="img-cover">
+                    <img src="./assets/images/pricing/Hair Care.jpg" width="90" height="90" alt="Hair Care" class="img-cover">
                   </figure>
-
                   <div class="wrapper">
-                    <h3 class="h3 card-title">Meditation & Massage</h3>
-
-                    <p class="card-text">Clean & simple 30-40 minutes</p>
+                    <h3 class="h3 card-title">Hair Care</h3>
+                    <p class="card-text">Nourishing treatment 30-50 minutes</p>
                   </div>
-
-                  <data class="card-price" value="74">74DH</data>
-
+                  <data class="card-price" value="200">200 DH</data>
+                </div>
+              </li>
+              <!-- Facial Care -->
+              <li data-filter="facial-care">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Academy Treatment.jpg" width="90" height="90" alt="Academy Treatment" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Academy Treatment</h3>
+                    <p class="card-text">Luxury facial 60-90 minutes</p>
+                  </div>
+                  <data class="card-price" value="300">300 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="facial-care">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Beard Treatment.jpg" width="90" height="90" alt="Beard Treatment" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Beard Treatment</h3>
+                    <p class="card-text">Beard care 20-30 minutes</p>
+                  </div>
+                  <data class="card-price" value="70">70 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="facial-care">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Black Mask.jpg" width="90" height="90" alt="Black Mask" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Black Mask</h3>
+                    <p class="card-text">Deep cleansing 20-30 minutes</p>
+                  </div>
+                  <data class="card-price" value="50">50 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="facial-care">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Gold Mask.jpg" width="90" height="90" alt="Gold Mask" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Gold Mask</h3>
+                    <p class="card-text">Luxury facial mask 30-50 minutes</p>
+                  </div>
+                  <data class="card-price" value="200">200 DH</data>
+                </div>
+              </li>
+              
+              <!-- Coloring -->
+              <li data-filter="coloring">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Normal Coloring" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Normal Coloring</h3>
+                    <p class="card-text">Hair coloring 40-60 minutes</p>
+                  </div>
+                  <data class="card-price" value="120">120 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="coloring">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Highlighted hair.jpg" width="90" height="90" alt="Highlights Coloring" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Highlights Coloring</h3>
+                    <p class="card-text">Highlighted hair 60-90 minutes</p>
+                  </div>
+                  <data class="card-price" value="300">300 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="coloring">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Beard dye.jpg" width="90" height="90" alt="Beard Coloring" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Beard Coloring</h3>
+                    <p class="card-text">Beard dye 20-30 minutes</p>
+                  </div>
+                  <data class="card-price" value="100">100 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="coloring">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Silver hair.jpg" width="90" height="90" alt="Silver Coloring" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Silver Coloring</h3>
+                    <p class="card-text">Silver hair dye 40-60 minutes</p>
+                  </div>
+                  <data class="card-price" value="500">500 DH</data>
+                </div>
+              </li>
+              <!-- manicure & pedicure -->
+              <!-- <li data-filter="manicure_and_pedicure">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Manicure" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Manicure</h3>
+                    <p class="card-text">Nail care 30-40 minutes</p>
+                  </div>
+                  <data class="card-price" value="130">130 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="manicure_and_pedicure">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Pedicure" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Pedicure</h3>
+                    <p class="card-text">Foot care 40-50 minutes</p>
+                  </div>
+                  <data class="card-price" value="170">170 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="manicure_and_pedicure">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Manicure Pedicure + Gold Mask" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Manicure Pedicure + Gold Mask</h3>
+                    <p class="card-text">Luxury nail & facial care 60-90 minutes</p>
+                  </div>
+                  <data class="card-price" value="400">400 DH</data>
+                </div>
+              </li> -->
+              <!-- GENTLEKIDS -->
+              <li data-filter="gentlekids">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Fade.jpg" width="90" height="90" alt="Fade" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Fade</h3>
+                    <p class="card-text">Kids fade cut 20-30 minutes</p>
+                  </div>
+                  <data class="card-price" value="80">80 DH</data>
+                </div>
+              </li>
+              
+              <li data-filter="gentlekids">
+                <div class="pricing-card">
+                  <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing/Kids classic cut.jpg" width="90" height="90" alt="Classic Cut" class="img-cover">
+                  </figure>
+                  <div class="wrapper">
+                    <h3 class="h3 card-title">Classic Cut</h3>
+                    <p class="card-text">Kids classic cut 15-25 minutes</p>
+                  </div>
+                  <data class="card-price" value="60">60 DH</data>
                 </div>
               </li>
 
