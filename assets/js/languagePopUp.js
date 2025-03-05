@@ -24,12 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // SLIDER ELEMENTS
     // ========================================================================
-    // const slide_title1 = document.getElementById('slide_title1');
-    // const slide_text1 = document.getElementById('slide_text1');
-    // const slide_title2 = document.getElementById('slide_title2');
-    // const slide_text2 = document.getElementById('slide_text2');
-    // const slide_title3 = document.getElementById('slide_title3');
-    // const slide_text3 = document.getElementById('slide_text3');
+    const slide_title = document.getElementById('slide_title');
+    const slide_learn_more = document.getElementById('slide_learn_more');
     // ========================================================================
     // SERVICE ELEMENTS
     // ========================================================================
@@ -50,14 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // PRICING ELEMENTS
     // ========================================================================
-    // const pricing_title = document.getElementById('pricing_title');
-    // const pricing_text = document.getElementById('pricing_text');
-    // const all_pricing = document.getElementById('all_pricing');
-    // const beauty_spa = document.getElementById('beauty_spa');
-    // const body_treatements = document.getElementById('body_treatements');
-    // const face_washing = document.getElementById('face_washing');
-    // const meditations = document.getElementById('meditations');
-    // const shaving = document.getElementById('shaving');
+    const pricing_title = document.getElementById('pricing_title');
+    const pricing_text = document.getElementById('pricing_text');
+    const gentleman = document.getElementById('gentleman');
+    const facial_care = document.getElementById('facial_care');
+    const coloring = document.getElementById('coloring');
+    const gentlekids = document.getElementById('gentlekids');
     // ========================================================================
     // GALLERY ELEMENTS
     // ========================================================================
@@ -137,12 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav_appointment: 'Appointment',
             },
             slider: {
-                slide_title1: 'Mobile Barber',
-                slide_text1: 'Professional Haircuts Anytime, Anywhere',
-                slide_title2: 'Premium Hair Care',
-                slide_text2: 'Experience Luxury at Your Doorstep',
-                slide_title3: 'Expert Stylists',
-                slide_text3: 'Quality Service On Your Schedule',
+                slide_title: 'Mobile barber service for today’s gentleman in the heart of Marrakech',
+                slide_learn_more: 'Learn More',
             },
             service: {
                 service_title: 'Service We Provide',
@@ -164,11 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 pricing_title: 'Awesome Pricing Plan',
                 pricing_text: 'Affordable and transparent pricing for premium grooming services, all at your doorstep. Choose the plan that suits your needs.',
                 all_pricing: 'All Pricing',
-                beauty_spa : 'Beauty & Spa',
-                body_treatements : 'Body Treatements',
-                face_washing : 'Face Washing',
-                meditations : 'Meditations',
-                shaving : 'Shaving',
+                gentleman : 'GENTLEMAN',
+                traitement : 'Treatment',
+                facial_care : 'Facial Care',
+                coloring : 'Coloring',
+                gentlekids : 'Gentlekids (-13 years)',
             },
             gallery : {
                 gallery_title : 'Latest Photo Gallery',
@@ -238,12 +228,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav_appointment: 'Rendez-vous',
             },
             slider: {
-                slide_title1: 'Barbier Mobile',
-                slide_text1: 'Coupe de cheveux professionnelle, à tout moment, n\'importe où',
-                slide_title2: 'Soins capillaires premium',
-                slide_text2: 'Vivez le luxe à votre porte',
-                slide_title3: 'Styliste experts',
-                slide_text3: 'Service de qualité selon votre emploi du temps',
+                slide_title: 'Service de barbier mobile pour le gentleman d\'aujourd\'hui au cœur de Marrakech.',
+                slide_learn_more : 'En savoir plus',
             },
             service: {
                 service_title: 'Service que nous fournissons',
@@ -265,11 +251,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 pricing_title: 'Plan tarifaire génial',
                 pricing_text: 'Des tarifs abordables et transparents pour des services de coiffure premium, directement à votre porte. Choisissez le plan qui correspond à vos besoins.',
                 all_pricing: 'Tous les tarifs',
-                beauty_spa: 'Beauté & Spa',
-                body_treatements: 'Soins du corps',
-                face_washing: 'Lavage du visage',
-                meditations: 'Méditations',
-                shaving: 'Rasage',
+                gentleman: 'GENTLEMAN',
+                traitement: 'traitement',
+                facial_care: 'Soins du visage',
+                coloring: 'Coloration',
+                gentlekids: 'Gentlekids (-13 ans)',
             },
             gallery: {
                 gallery_title: 'Dernière galerie de photos',
@@ -349,12 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav_appointment: 'موعد',
             },
             slider: {
-                slide_title1: 'حلاق متنقل',
-                slide_text1: 'قصات شعر احترافية في أي وقت وأي مكان',
-                slide_title2: 'عناية بالشعر فاخرة',
-                slide_text2: 'اختبر الفخامة عند باب منزلك',
-                slide_title3: 'مصممون خبراء',
-                slide_text3: 'خدمة عالية الجودة في وقتك المحدد',
+                slide_title: 'خدمة حلاق متنقلة للسيد العصري في قلب مراكش',
+                slide_learn_more: 'اعرف أكثر',
             },
             service: {
                 service_title: 'الخدمة التي نقدمها',
@@ -376,11 +358,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 pricing_title: 'خطة تسعير رائعة',
                 pricing_text: 'أسعار معقولة وشفافة لخدمات التجميل الفاخرة، كل ذلك عند باب منزلك. اختر الخطة التي تناسب احتياجاتك.',
                 all_pricing: 'جميع الأسعار',
-                beauty_spa: 'الجمال وسبا',
-                body_treatements: 'علاجات الجسم',
-                face_washing: 'غسل الوجه',
-                meditations: 'تأملات',
-                shaving: 'حلاقة',
+                gentleman: 'رجل أنيق',
+                traitement: 'علاج',
+                facial_care: 'عناية بالوجه',
+                coloring: 'صبغة الشعر',
+                gentlekids: 'جينتلكيدز (أقل من 13 سنة)',
                 // i'll complet that later 👍🏻
             },
             gallery: {
@@ -486,12 +468,9 @@ document.addEventListener('DOMContentLoaded', function() {
         nav_appointment.textContent = translations[lang].header.nav_appointment;
     
         // SLIDER ELEMENTS
-        // slide_title1.textContent = translations[lang].slider.slide_title1;
-        // slide_text1.textContent = translations[lang].slider.slide_text1;
-        // slide_title2.textContent = translations[lang].slider.slide_title2;
-        // slide_text2.textContent = translations[lang].slider.slide_text2;
-        // slide_title3.textContent = translations[lang].slider.slide_title3;
-        // slide_text3.textContent = translations[lang].slider.slide_text3;
+        slide_title.textContent = translations[lang].slider.slide_title;
+        slide_learn_more.textContent = translations[lang].slider.slide_learn_more;
+        
     
         // SERVICE ELEMENTS
         service_title.textContent = translations[lang].service.service_title;
@@ -512,11 +491,12 @@ document.addEventListener('DOMContentLoaded', function() {
         pricing_title.textContent = translations[lang].pricing.pricing_title;
         pricing_text.textContent = translations[lang].pricing.pricing_text;
         all_pricing.textContent = translations[lang].pricing.all_pricing;
-        beauty_spa.textContent = translations[lang].pricing.beauty_spa;
-        body_treatements.textContent = translations[lang].pricing.body_treatements;
-        face_washing.textContent = translations[lang].pricing.face_washing;
-        meditations.textContent = translations[lang].pricing.meditations;
-        shaving.textContent = translations[lang].pricing.shaving
+        gentleman.textContent = translations[lang].pricing.gentleman;
+        traitement.textContent = translations[lang].pricing.traitement;
+        facial_care.textContent = translations[lang].pricing.facial_care;
+        coloring.textContent = translations[lang].pricing.coloring;
+        gentlekids.textContent = translations[lang].pricing.gentlekids;
+        
 
         // GALLERY ELEMENTS
         gallery_title.textContent = translations[lang].gallery.gallery_title;
