@@ -95,22 +95,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================================================
     // FOOTER ELEMENTS
     // ========================================================================
-    // const logo = document.getElementById('logo');
-    // const footer_title = document.getElementById('footer_title');
-    // const subscribe_now = document.getElementById('subscribe_now');
-    // const quick_links = document.getElementById('quick_links');
-    // const our_services = document.getElementById('our_services');
-    // const meet_our_team = document.getElementById('meet_our_team');
-    // const our_portfolio = document.getElementById('our_portfolio');
-    // const need_a_career = document.getElementById('need_a_career');
-    // const news_and_blog = document.getElementById('news_and_blog');
-    // const footer_services = document.getElementById('footer_services');
-    // const footer_hair_cutting = document.getElementById('footer_hair_cutting');
-    // const footer_shaving_and_design = document.getElementById('footer_shaving_and_design');
-    // const footer_hair_colors = document.getElementById('footer_hair_colors');
-    // const footer_beauty_and_spa = document.getElementById('footer_beauty_and_spa');
-    // const footer_body_massages = document.getElementById('footer_body_massages');
-
+    // const footer_logo = document.getElementById('footer_logo');
+    const footer_title = document.getElementById('footer_title');
+    const email_address = document.getElementById('email_address');
+    const subscribe_now = document.getElementById('subscribe_now');
+    const quick_links = document.getElementById('quick_links');
+    const our_services = document.getElementById('our_services');
+    const meet_our_team = document.getElementById('meet_our_team');
+    const our_portfolio = document.getElementById('our_portfolio');
+    const need_a_career = document.getElementById('need_a_career');
+    const news_and_blog = document.getElementById('news_and_blog');
+    const footer_services = document.getElementById('footer_services');
+    const footer_gentleman = document.getElementById('footer_gentleman');
+    const footer_traitement= document.getElementById('footer_traitement');
+    const footer_face_care = document.getElementById('footer_face_care');
+    const footer_coloring = document.getElementById('footer_coloring');
+    const footer_gentlekids = document.getElementById('footer_gentlekids');
+    const recent_news = document.getElementById('recent_news');
+    const news_one = document.getElementById('news_one');
+    const news_date_one = document.getElementById('news_date_one');
+    const news_two = document.getElementById('news_two');
+    const news_date_two = document.getElementById('news_date_two');
+    const contact_us = document.getElementById('contact_us');
+    const address_link = document.getElementById('adress_link');
+    const contact_link = document.getElementById('contact_link');
+    
     // ========================================================================
     // SECTION: Translation Data
     // ========================================================================
@@ -194,9 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 author3 : '- Sophia Martinez',
             },
             footer: {
-                logo : 'Barber Kech',
+                // footer_logo : 'Barber Kech',
                 footer_title : 'Barber Kech',
                 subscribe_now : 'Subscribe Now',
+                email_address : 'Enter Your Email',
                 quick_links : 'Quick Links',
                 our_services : 'Our Services',
                 meet_our_team : 'Meet Our Team',
@@ -204,11 +214,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 need_a_career : 'Need a Career?',
                 news_and_blog : 'News & Blog',
                 footer_services : 'Services',
-                footer_hair_cutting : 'Hair Cutting',
-                footer_shaving_and_design : 'Shaving & Design',
-                footer_hair_colors : 'Hair Colors',
-                footer_beauty_and_spa : 'Beauty & Spa',
-                footer_body_massages : 'Body Massages',
+                footer_gentleman : 'Gentleman',
+                footer_traitement : 'Treatment',
+                footer_face_care : 'Face Care',
+                footer_coloring : 'Coloring',
+                footer_gentlekids : 'Gentlekids',
+                recent_news : 'Recent News',
+                news_one : 'Mobile barbering: \'It\'s like Uber, but for haircuts\'',
+                news_two : 'The Rise of Mobile Barbershops',
+                news_date_one : '29 March 2019',
+                news_date_two : '9 January 2025',
+                contact_us : 'Contact Us',
+                address_link : 'Marrakech, Morocco',
+                contact_link : '+212 706-194405',
+                footer_opening_hour_time : 'Sun - Friday, 08 am - 09 pm',
+
             },
 
         },
@@ -291,9 +311,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 author3: '- Sophia Martinez',
             },
             footer: {
-                logo: 'Barber Kech',
+                // footer_logo: 'Barber Kech',
                 footer_title: 'Barber Kech',
                 subscribe_now: 'Abonnez-vous maintenant',
+                email_address: 'Entrez votre adresse e-mail',
                 quick_links: 'Liens rapides',
                 our_services: 'Nos services',
                 meet_our_team: 'Rencontrez notre équipe',
@@ -301,11 +322,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 need_a_career: 'Besoin d’une carrière ?',
                 news_and_blog: 'Actualités & Blog',
                 footer_services: 'Services',
-                footer_hair_cutting: 'Coupe de cheveux',
-                footer_shaving_and_design: 'Rasage & Design',
-                footer_hair_colors: 'Colorations capillaires',
-                footer_beauty_and_spa: 'Beauté & Spa',
-                footer_body_massages: 'Massages corporels',
+                footer_gentleman: 'Gentleman',
+                footer_traitement: 'Traitement',
+                footer_face_care: 'soins de visages',
+                footer_coloring: 'coloration',
+                footer_gentlekids: 'Gentlekids',
+                recent_news : 'actualités récentes',
+                news_one : 'Barbier mobile : « C\'est comme Uber, mais pour les coupes de cheveux »',
+                news_two : 'L\'essor des salons de coiffure mobiles',
+                news_date_one : '29 mars 2019',
+                news_date_two : '9 janvier 2025',
+                contact_us : 'Contactez-nous',
+                address_link : 'Marrakech, Maroc',
+                contact_link : '+212 706-194405',
+                footer_opening_hour_time : 'Dim - Vendredi, 08h00 - 21h00',
             },
             
             
@@ -400,9 +430,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 author3: '- صوفيا مارتينيز',
             },
             footer: {
-                logo: 'Barber Kech',
+                // footer_logo: 'Barber Kech',
                 footer_title: 'Barber Kech',
                 subscribe_now: 'اشترك الآن',
+                email_address: 'أدخل بريدك الإلكتروني',
                 quick_links: 'روابط سريعة',
                 our_services: 'خدماتنا',
                 meet_our_team: 'تعرف على فريقنا',
@@ -410,11 +441,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 need_a_career: 'هل تبحث عن وظيفة؟',
                 news_and_blog: 'الأخبار والمدونة',
                 footer_services: 'الخدمات',
-                footer_hair_cutting: 'قص الشعر',
-                footer_shaving_and_design: 'الحلاقة والتصميم',
-                footer_hair_colors: 'صبغات الشعر',
-                footer_beauty_and_spa: 'الجمال والمنتجع الصحي',
-                footer_body_massages: 'تدليك الجسم',
+                footer_gentleman: 'قصة الرجل الأنيق',
+                footer_traitement: 'علاج الشعر',
+                footer_face_care: 'العناية بالبشرة',
+                footer_coloring: 'صباغة الشعر',
+                footer_gentlekids: 'جنتل كيدز',
+                recent_news : 'آخر الأخبار',
+                news_one : 'الحلاقة المتنقلة: "إنها مثل أوبر، ولكن لقص الشعر"',
+                news_two : 'صعود صالونات الحلاقة المتنقلة',
+                news_date_one : '29 مارس 2019',
+                news_date_two : '9 يناير 2025',
+                contact_us : 'إتصل بنا',
+                address_link : 'مراكش، المغرب',
+                contact_link : '+212 706-194405',
+                footer_opening_hour_time : 'من الأحد إلى الجمعة، من 08 صباحًا إلى 09 مساءً',
             },
             
 
@@ -535,23 +575,33 @@ document.addEventListener('DOMContentLoaded', function() {
         author3.textContent = translations[lang].testimonials.author3;
 
         //FOOTER ELEMENTS
-        // logo.textContent = translations[lang].footer.logo;
-        // footer_title.textContent = translations[lang].footer.footer_title;
-        // subscribe_now.textContent = translations[lang].footer.subscribe_now;
-        // quick_links.textContent = translations[lang].footer.quick_links;
-        // our_services.textContent = translations[lang].footer.our_services;
-        // meet_our_team.textContent = translations[lang].footer.meet_our_team;
-        // our_portfolio.textContent = translations[lang].footer.our_portfolio;
-        // need_a_career.textContent = translations[lang].footer.need_a_career;
-        // news_and_blog.textContent = translations[lang].footer.news_and_blog;
-        // footer_services.textContent = translations[lang].footer.footer_services;
-        // footer_hair_cutting.textContent = translations[lang].footer.footer_hair_cutting;
-        // footer_shaving_and_design.textContent = translations[lang].footer.footer_shaving_and_design;
-        // footer_hair_colors.textContent = translations[lang].footer.footer_hair_colors;
-        // footer_beauty_and_spa.textContent = translations[lang].footer.footer_beauty_and_spa;
-        // footer_body_massages.textContent = translations[lang].footer.footer_body
+        // footer_logo.textContent = translations[lang].footer.footer_logo;
+        footer_title.textContent = translations[lang].footer.footer_title;
+        subscribe_now.textContent = translations[lang].footer.subscribe_now;
+        email_address.placeholder = translations[lang].footer.email_address;
+        quick_links.textContent = translations[lang].footer.quick_links;
+        our_services.textContent = translations[lang].footer.our_services;
+        meet_our_team.textContent = translations[lang].footer.meet_our_team;
+        our_portfolio.textContent = translations[lang].footer.our_portfolio;
+        need_a_career.textContent = translations[lang].footer.need_a_career;
+        news_and_blog.textContent = translations[lang].footer.news_and_blog;
+        footer_services.textContent = translations[lang].footer.footer_services;
+        footer_gentleman.textContent = translations[lang].footer.footer_gentleman;
+        footer_traitement.textContent = translations[lang].footer.footer_traitement;
+        footer_face_care.textContent = translations[lang].footer.footer_face_care;
+        footer_coloring.textContent = translations[lang].footer.footer_coloring;
+        footer_gentlekids.textContent = translations[lang].footer.footer_gentlekids;
+        recent_news.textContent = translations[lang].footer.recent_news;
+        news_one.textContent = translations[lang].footer.news_one;
+        news_two.textContent = translations[lang].footer.news_two;
+        news_date_one.textContent = translations[lang].footer.news_date_one;
+        news_date_two.textContent = translations[lang].footer.news_date_two;
+        contact_us.textContent = translations[lang].footer.contact_us;
+        address_link.textContent = translations[lang].footer.address_link;
+        contact_link.textContent = translations[lang].footer.contact_link;
+        footer_opening_hour_time.textContent = translations[lang].footer.footer_opening_hour_time;
         
-
+        
 
         // Change direction of text if language is Arabic
         // header.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
