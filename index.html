@@ -926,12 +926,20 @@
               
                 <div class="input-wrapper">
                   <input type="text" name="phone" placeholder="Phone Number" required class="input-field" id="phone">
-                  <select name="category" class="input-field">
-                    <option value="Select category" id="select_category">Select category</option>
-                    <option value="Beauty & spa" id="beauty_spa">Beauty & spa</option>
-                    <option value="Head massage" id="head_massage">Head massage</option>
-                    <option value="Shaving & Facial" id="shaving_facial">Shaving & Facial</option>
-                    <option value="Hair Color" id="hair_color">Hair Color</option>
+                  <select name="category" class="input-field" id="categorySelect">
+                    <option value="" disabled selected>Select category</option>
+                    <option value="gentleman">Gentleman</option>
+                    <option value="traitement">Traitement</option>
+                    <option value="facial-care">Facial Care</option>
+                    <option value="coloring">Coloring</option>
+                    <option value="gentlekids">Gentlekids</option>
+                  </select>
+                </div>
+              
+                <!-- New select field for services, initially hidden -->
+                <div class="input-wrapper" id="serviceWrapper" style="display: none;">
+                  <select name="service" class="input-field" id="serviceSelect">
+                    <option value="" disabled selected>Select service</option>
                   </select>
                 </div>
               
@@ -944,14 +952,74 @@
                 </button>
               </form>
               <script>
+                // Define the table data
+                const table = {
+                  gentleman: [
+                    { "Service": "Haircut", "Description": "Clean & stylish 30-40 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
+                    { "Service": "Beard", "Description": "Grooming & shaping 20-30 minutes", "Price": "80 DH", "Image": "./assets/images/pricing/beard.jpg" },
+                    { "Service": "Beard Trim", "Description": "Precise trimming 15-20 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Beard Trim.jpg" },
+                    { "Service": "Blowout", "Description": "Smooth & voluminous 20-30 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Blowout.jpg" },
+                    { "Service": "Zero Cut", "Description": "Close shave cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Zero Cut.jpg" }
+                  ],
+                  traitement: [
+                    { "Service": "Keratin", "Description": "Smoothing treatment 60-90 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Keratin.jpg" },
+                    { "Service": "Protein", "Description": "Strengthening treatment 60-90 minutes", "Price": "600 DH", "Image": "./assets/images/pricing/Protein.jpg" },
+                    { "Service": "Hair Care", "Description": "Nourishing treatment 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Hair Care.jpg" }
+                  ],
+                  "facial-care": [
+                    { "Service": "Academy Treatment", "Description": "Luxury facial 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Academy Treatment.jpg" },
+                    { "Service": "Beard Treatment", "Description": "Beard care 20-30 minutes", "Price": "150 DH", "Image": "./assets/images/pricing/Beard Treatment.jpg" },
+                    { "Service": "Black Mask", "Description": "Deep cleansing 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Black Mask.jpg" },
+                    { "Service": "Gold Mask", "Description": "Luxury facial mask 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Gold Mask.jpg" }
+                  ],
+                  coloring: [
+                    { "Service": "Normal Coloring", "Description": "Hair coloring 40-60 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
+                    { "Service": "Highlights Coloring", "Description": "Highlighted hair 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Highlighted hair.jpg" },
+                    { "Service": "Beard Coloring", "Description": "Beard dye 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Beard dye.jpg" },
+                    { "Service": "Silver Coloring", "Description": "Silver hair dye 40-60 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Silver hair.jpg" }
+                  ],
+                  gentlekids: [
+                    { "Service": "Fade", "Description": "Kids fade cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Fade.jpg" },
+                    { "Service": "Classic Cut", "Description": "Kids classic cut 15-25 minutes", "Price": "250 DH", "Image": "./assets/images/pricing/Kids classic cut.jpg" }
+                  ]
+                };
+              
+                // Get DOM elements
+                const categorySelect = document.getElementById("categorySelect");
+                const serviceSelect = document.getElementById("serviceSelect");
+                const serviceWrapper = document.getElementById("serviceWrapper");
+              
+                // Event listener for category selection
+                categorySelect.addEventListener("change", function() {
+                  const selectedCategory = this.value;
+              
+                  // Clear previous options in service select
+                  serviceSelect.innerHTML = '<option value="" disabled selected>Select service</option>';
+              
+                  // If a valid category is selected, populate the service dropdown and show it
+                  if (table[selectedCategory]) {
+                    table[selectedCategory].forEach(service => {
+                      const option = document.createElement("option");
+                      option.value = service.Service;
+                      option.text = `${service.Service} - ${service.Price} (${service.Description})`;
+                      serviceSelect.appendChild(option);
+                    });
+                    serviceWrapper.style.display = "block"; // Show the service select
+                  } else {
+                    serviceWrapper.style.display = "none"; // Hide if no category selected
+                  }
+                });
+              
+                // Form submission handler
                 document.getElementById("whatsappForm").addEventListener("submit", function(event) {
-                  event.preventDefault(); // Prevent the default form submission
+                  event.preventDefault(); // Prevent default form submission
               
                   // Collect form data
                   let name = document.querySelector("[name='name']").value;
                   let email = document.querySelector("[name='email_address']").value;
                   let phone = document.querySelector("[name='phone']").value;
                   let category = document.querySelector("[name='category']").value;
+                  let service = document.querySelector("[name='service']").value || "Not specified";
                   let date = document.querySelector("[name='date']").value;
                   let message = document.querySelector("[name='message']").value;
               
@@ -961,6 +1029,7 @@
                   - Email: ${email}%0A
                   - Phone: ${phone}%0A
                   - Category: ${category}%0A
+                  - Service: ${service}%0A
                   - Date: ${date}%0A
                   - Message: ${message}`;
               
