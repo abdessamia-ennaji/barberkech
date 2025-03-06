@@ -163,9 +163,9 @@
   <div id="content">
   
    
-    <header class="header">
+    <header class="header" >
   
-      <div class="header-top">
+      <div class="header-top" style="background-color: #0d0d0d;">
         <div class="container">
   
           <ul class="header-top-list">
@@ -181,9 +181,9 @@
             <li class="header-top-item">
               <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
   
-              <p class="item-title">Opening Hour :</p>
+              <p class="item-title" id="opening_hour">Opening Hour :</p>
   
-              <p class="item-text">Sunday - Friday, 08 am - 09 pm</p>
+              <p class="item-text" id="opening_hour_time">Sunday - Friday, 08 am - 09 pm</p>
             </li>
   
             <li>
@@ -224,9 +224,9 @@
       <div class="header-bottom" data-header>
         <div class="container">
   
-          <a href="./index.html" class="logo">
+          <a href="./index.html" class="logo" id="barber_kech">
             BARBER KECH
-            <span class="span">Mobile Barber</span>
+            <span class="span" id="mobile_barber">Mobile Barber</span>
           </a>
   
           <nav class="navbar container" data-navbar>
@@ -455,7 +455,7 @@
   
             <form action="" class="input-wrapper">
   
-              <input type="email" name="email_address" placeholder="Enter Your Email" required class="email-field">
+              <input type="email" name="email_address" placeholder="Enter Your Email" id="email_address" required class="email-field">
   
               <button type="submit" class="btn has-before">
                 <span class="span" id="subscribe_now">Subscribe Now</span>
@@ -504,23 +504,24 @@
               </li>
   
               <li>
-                <a href="#" class="footer-link has-before" id="footer_hair_cutting">Hair Cutting Style</a>
+                <a href="#" class="footer-link has-before" id="footer_gentleman">Gentleman</a>
               </li>
   
               <li>
-                <a href="#" class="footer-link has-before" id="footer_shaving_and_design">Hair Treatment</a>
+                <a href="#" class="footer-link has-before" id="footer_traitement">Treatment</a>
               </li>
   
+              
               <li>
-                <a href="#" class="footer-link has-before" id="footer_hair_colors">Skin Cleansing</a>
+                <a href="#" class="footer-link has-before" id="footer_face_care">Face Care</a>
               </li>
-  
+              
               <li>
-                <a href="#" class="footer-link has-before" id="footer_beauty_and_spa">Beard Shaping</a>
+                <a href="#" class="footer-link has-before" id="footer_coloring">Coloring</a>
               </li>
-  
+              
               <li>
-                <a href="#" class="footer-link has-before" id="footer_body_massages">Multi Hair Colors</a>
+                <a href="#" class="footer-link has-before" id="footer_gentlekids">Gentlekids</a>
               </li>
   
             </ul>
@@ -528,7 +529,7 @@
             <ul class="footer-list">
   
               <li>
-                <p class="footer-list-title">Recent News</p>
+                <p class="footer-list-title" id="recent_news">Recent News</p>
               </li>
   
               <li>
@@ -541,13 +542,13 @@
   
                   <div class="card-content">
                     <h3>
-                      <a href="https://www.bbc.com/news/stories-47711610" class="card-title">Mobile barbering: 'It's like Uber, but for haircuts'</a>
+                      <a href="https://www.bbc.com/news/stories-47711610" class="card-title" id="news_one">Mobile barbering: 'It's like Uber, but for haircuts'</a>
                     </h3>
   
                     <div class="card-date">
                       <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
   
-                      <time datetime="2019-03-29">29 March 2019</time>
+                      <time datetime="2019-03-29" id="news_date_one">29 March 2019</time>
                     </div>
                   </div>
   
@@ -564,7 +565,7 @@
   
                   <div class="card-content">
                     <h3>
-                      <a href="https://supremetrimmer.com/blogs/blog/the-rise-of-mobile-barbershops-how-taking-your-services-on-the-road-can-boost-your-business" class="card-title">
+                      <a href="https://supremetrimmer.com/blogs/blog/the-rise-of-mobile-barbershops-how-taking-your-services-on-the-road-can-boost-your-business" class="card-title" id="news_two">
                         The Rise of Mobile Barbershops
                       </a>
                     </h3>
@@ -572,7 +573,7 @@
                     <div class="card-date">
                       <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
   
-                      <time datetime="2025-01-09">9 January 2025</time>
+                      <time datetime="2025-01-09" id="news_date_two">9 January 2025</time>
                     </div>
                   </div>
   
@@ -584,13 +585,13 @@
             <ul class="footer-list">
   
               <li>
-                <p class="footer-list-title">Contact Us</p>
+                <p class="footer-list-title" id="contact_us">Contact Us</p>
               </li>
   
               <li class="footer-list-item">
                 <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
   
-                <address class="contact-link">
+                <address class="contact-link" id="adress_link">
                   Marrakech, Morocco
                 </address>
               </li>
@@ -598,13 +599,13 @@
               <li class="footer-list-item">
                 <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
   
-                <a href="tel:+212706194405" class="contact-link">+212 706-194405</a>
+                <a href="tel:+212706194405" class="contact-link" id="contact_link" dir="ltr">+212 706-194405</a>
               </li>
   
               <li class="footer-list-item">
                 <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
   
-                <span class="contact-link">Sun - Friday, 08 am - 09 pm</span>
+                <span class="contact-link" id="footer_opening_hour_time">Sun - Friday, 08 am - 09 pm</span>
               </li>
   
               <li class="footer-list-item">
