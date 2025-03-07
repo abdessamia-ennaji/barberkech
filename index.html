@@ -920,159 +920,160 @@
 
               <form id="whatsappForm" class="appoin-form">
                 <div class="input-wrapper">
-                  <input type="text" name="name" placeholder="Your Full Name" required class="input-field" id="name">
-                  <input type="email" name="email_address" placeholder="Email Address" required class="input-field" id="email">
+                    <input type="text" name="name" placeholder="Your Full Name" required class="input-field" id="name">
+                    <input type="email" name="email_address" placeholder="Email Address" required class="input-field" id="email">
                 </div>
-              
+                
                 <div class="input-wrapper">
-                  <input type="text" name="phone" placeholder="Phone Number" required class="input-field" id="phone">
+                    <input type="text" name="phone" placeholder="Phone Number" required class="input-field" id="phone">
                 </div>
-              
+                
                 <!-- Accordion container for categories and services -->
                 <div id="categoriesAccordion">
-                  <div class="accordion-item">
-                    <button class="accordion-toggle">Gentleman</button>
-                    <div class="accordion-content" data-category="gentleman"></div>
-                  </div>
-                  <div class="accordion-item">
-                    <button class="accordion-toggle">Traitement</button>
-                    <div class="accordion-content" data-category="traitement"></div>
-                  </div>
-                  <div class="accordion-item">
-                    <button class="accordion-toggle">Facial Care</button>
-                    <div class="accordion-content" data-category="facial-care"></div>
-                  </div>
-                  <div class="accordion-item">
-                    <button class="accordion-toggle">Coloring</button>
-                    <div class="accordion-content" data-category="coloring"></div>
-                  </div>
-                  <div class="accordion-item">
-                    <button class="accordion-toggle">Gentlekids</button>
-                    <div class="accordion-content" data-category="gentlekids"></div>
-                  </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-toggle">Gentleman</button> <!-- Added type="button" -->
+                        <div class="accordion-content" data-category="gentleman"></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-toggle">Traitement</button> <!-- Added type="button" -->
+                        <div class="accordion-content" data-category="traitement"></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-toggle">Facial Care</button> <!-- Added type="button" -->
+                        <div class="accordion-content" data-category="facial-care"></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-toggle">Coloring</button> <!-- Added type="button" -->
+                        <div class="accordion-content" data-category="coloring"></div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-toggle">Gentlekids</button> <!-- Added type="button" -->
+                        <div class="accordion-content" data-category="gentlekids"></div>
+                    </div>
                 </div>
-              
+                
                 <input type="date" name="date" required class="input-field date">
+                <input type="time" name="time" required class="input-field" id="time">
                 <textarea name="message" placeholder="Write Message" required class="input-field" id="write_message"></textarea>
-              
+                
                 <button type="submit" class="form-btn">
-                  <span class="span" id="appointment_now">Appointment Now</span>
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    <span class="span" id="appointment_now">Appointment Now</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </button>
-              </form>
-              <script>
-                // Define the table data
+            </form>
+            
+            <script>
+                // Define the table data (unchanged)
                 const table = {
-                  gentleman: [
-                    { "Service": "Haircut", "Description": "Clean & stylish 30-40 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
-                    { "Service": "Beard", "Description": "Grooming & shaping 20-30 minutes", "Price": "80 DH", "Image": "./assets/images/pricing/beard.jpg" },
-                    { "Service": "Beard Trim", "Description": "Precise trimming 15-20 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Beard Trim.jpg" },
-                    { "Service": "Blowout", "Description": "Smooth & voluminous 20-30 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Blowout.jpg" },
-                    { "Service": "Zero Cut", "Description": "Close shave cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Zero Cut.jpg" }
-                  ],
-                  traitement: [
-                    { "Service": "Keratin", "Description": "Smoothing treatment 60-90 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Keratin.jpg" },
-                    { "Service": "Protein", "Description": "Strengthening treatment 60-90 minutes", "Price": "600 DH", "Image": "./assets/images/pricing/Protein.jpg" },
-                    { "Service": "Hair Care", "Description": "Nourishing treatment 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Hair Care.jpg" }
-                  ],
-                  "facial-care": [
-                    { "Service": "Academy Treatment", "Description": "Luxury facial 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Academy Treatment.jpg" },
-                    { "Service": "Beard Treatment", "Description": "Beard care 20-30 minutes", "Price": "150 DH", "Image": "./assets/images/pricing/Beard Treatment.jpg" },
-                    { "Service": "Black Mask", "Description": "Deep cleansing 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Black Mask.jpg" },
-                    { "Service": "Gold Mask", "Description": "Luxury facial mask 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Gold Mask.jpg" }
-                  ],
-                  coloring: [
-                    { "Service": "Normal Coloring", "Description": "Hair coloring 40-60 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
-                    { "Service": "Highlights Coloring", "Description": "Highlighted hair 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Highlighted hair.jpg" },
-                    { "Service": "Beard Coloring", "Description": "Beard dye 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Beard dye.jpg" },
-                    { "Service": "Silver Coloring", "Description": "Silver hair dye 40-60 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Silver hair.jpg" }
-                  ],
-                  gentlekids: [
-                    { "Service": "Fade", "Description": "Kids fade cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Fade.jpg" },
-                    { "Service": "Classic Cut", "Description": "Kids classic cut 15-25 minutes", "Price": "250 DH", "Image": "./assets/images/pricing/Kids classic cut.jpg" }
-                  ]
+                    gentleman: [
+                        { "Service": "Haircut", "Description": "Clean & stylish 30-40 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
+                        { "Service": "Beard", "Description": "Grooming & shaping 20-30 minutes", "Price": "80 DH", "Image": "./assets/images/pricing/beard.jpg" },
+                        { "Service": "Beard Trim", "Description": "Precise trimming 15-20 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Beard Trim.jpg" },
+                        { "Service": "Blowout", "Description": "Smooth & voluminous 20-30 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Blowout.jpg" },
+                        { "Service": "Zero Cut", "Description": "Close shave cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Zero Cut.jpg" }
+                    ],
+                    traitement: [
+                        { "Service": "Keratin", "Description": "Smoothing treatment 60-90 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Keratin.jpg" },
+                        { "Service": "Protein", "Description": "Strengthening treatment 60-90 minutes", "Price": "600 DH", "Image": "./assets/images/pricing/Protein.jpg" },
+                        { "Service": "Hair Care", "Description": "Nourishing treatment 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Hair Care.jpg" }
+                    ],
+                    "facial-care": [
+                        { "Service": "Academy Treatment", "Description": "Luxury facial 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Academy Treatment.jpg" },
+                        { "Service": "Beard Treatment", "Description": "Beard care 20-30 minutes", "Price": "150 DH", "Image": "./assets/images/pricing/Beard Treatment.jpg" },
+                        { "Service": "Black Mask", "Description": "Deep cleansing 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Black Mask.jpg" },
+                        { "Service": "Gold Mask", "Description": "Luxury facial mask 30-50 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Gold Mask.jpg" }
+                    ],
+                    coloring: [
+                        { "Service": "Normal Coloring", "Description": "Hair coloring 40-60 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
+                        { "Service": "Highlights Coloring", "Description": "Highlighted hair 60-90 minutes", "Price": "300 DH", "Image": "./assets/images/pricing/Highlighted hair.jpg" },
+                        { "Service": "Beard Coloring", "Description": "Beard dye 20-30 minutes", "Price": "100 DH", "Image": "./assets/images/pricing/Beard dye.jpg" },
+                        { "Service": "Silver Coloring", "Description": "Silver hair dye 40-60 minutes", "Price": "500 DH", "Image": "./assets/images/pricing/Silver hair.jpg" }
+                    ],
+                    gentlekids: [
+                        { "Service": "Fade", "Description": "Kids fade cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Fade.jpg" },
+                        { "Service": "Classic Cut", "Description": "Kids classic cut 15-25 minutes", "Price": "250 DH", "Image": "./assets/images/pricing/Kids classic cut.jpg" }
+                    ]
                 };
-              
-                // Populate accordion content with services
+            
+                // Populate accordion content with services (unchanged)
                 document.querySelectorAll(".accordion-content").forEach(content => {
-                  const category = content.getAttribute("data-category");
-                  const services = table[category];
-              
-                  services.forEach(service => {
-                    const checkboxDiv = document.createElement("div");
-                    checkboxDiv.innerHTML = `
-                      <label>
-                        <input type="checkbox" name="services" value="${category}:${service.Service}">
-                        ${service.Service} - ${service.Price} (${service.Description})
-                      </label>
-                    `;
-                    content.appendChild(checkboxDiv);
-                  });
-                });
-              
-                // Accordion toggle functionality
-                document.querySelectorAll(".accordion-toggle").forEach(button => {
-                  button.addEventListener("click", function() {
-                    const content = this.nextElementSibling;
-                    const isOpen = content.style.display === "block";
-              
-                    // Close all other accordion items
-                    document.querySelectorAll(".accordion-content").forEach(item => {
-                      item.style.display = "none";
+                    const category = content.getAttribute("data-category");
+                    const services = table[category];
+            
+                    services.forEach(service => {
+                        const checkboxDiv = document.createElement("div");
+                        checkboxDiv.innerHTML = `
+                            <label>
+                                <input type="checkbox" name="services" value="${category}:${service.Service}">
+                                ${service.Service} - ${service.Price} (${service.Description})
+                            </label>
+                        `;
+                        content.appendChild(checkboxDiv);
                     });
-              
-                    // Toggle the clicked one
-                    content.style.display = isOpen ? "none" : "block";
-                  });
                 });
-              
-                // Form submission handler
+            
+                // Accordion toggle functionality (unchanged)
+                document.querySelectorAll(".accordion-toggle").forEach(button => {
+                    button.addEventListener("click", function() {
+                        const content = this.nextElementSibling;
+                        const isOpen = content.style.display === "block";
+            
+                        document.querySelectorAll(".accordion-content").forEach(item => {
+                            item.style.display = "none";
+                        });
+            
+                        content.style.display = isOpen ? "none" : "block";
+                    });
+                });
+            
+                // Form submission handler (unchanged)
                 document.getElementById("whatsappForm").addEventListener("submit", function(event) {
-                  event.preventDefault(); // Prevent default form submission
-              
-                  // Collect form data
-                  let name = document.querySelector("[name='name']").value;
-                  let email = document.querySelector("[name='email_address']").value;
-                  let phone = document.querySelector("[name='phone']").value;
-                  let date = document.querySelector("[name='date']").value;
-                  let message = document.querySelector("[name='message']").value;
-              
-                  // Collect selected services
-                  const selectedServices = Array.from(document.querySelectorAll("input[name='services']:checked"))
-                    .map(checkbox => checkbox.value.split(":"))
-                    .reduce((acc, [category, service]) => {
-                      acc[category] = acc[category] || [];
-                      acc[category].push(service);
-                      return acc;
-                    }, {});
-              
-                  // Format services for WhatsApp message
-                  let servicesText = "Selected Services:%0A";
-                  for (const [category, services] of Object.entries(selectedServices)) {
-                    servicesText += `- ${category}: ${services.join(", ")}%0A`;
-                  }
-                  if (Object.keys(selectedServices).length === 0) {
-                    servicesText = "No services selected";
-                  }
-              
-                  // Construct the WhatsApp message
-                  let whatsappMessage = `Hello, I would like to book an appointment:%0A
-                  - Name: ${name}%0A
-                  - Email: ${email}%0A
-                  - Phone: ${phone}%0A
-                  ${servicesText}
-                  - Date: ${date}%0A
-                  - Message: ${message}`;
-              
-                  // Replace with the correct WhatsApp number (including country code)
-                  let phoneNumber = "212706194405";
-              
-                  // Open WhatsApp chat
-                  let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-                  window.open(whatsappURL, "_blank");
+                    event.preventDefault();
+            
+                    // Collect form data
+                    let name = document.querySelector("[name='name']").value;
+                    let email = document.querySelector("[name='email_address']").value;
+                    let phone = document.querySelector("[name='phone']").value;
+                    let date = document.querySelector("[name='date']").value;
+                    let time = document.querySelector("[name='time']").value;
+                    let message = document.querySelector("[name='message']").value;
+            
+                    // Collect selected services
+                    const selectedServices = Array.from(document.querySelectorAll("input[name='services']:checked"))
+                        .map(checkbox => checkbox.value.split(":"))
+                        .reduce((acc, [category, service]) => {
+                            acc[category] = acc[category] || [];
+                            acc[category].push(service);
+                            return acc;
+                        }, {});
+            
+                    // Format services for WhatsApp message
+                    let servicesText = "Selected Services:%0A";
+                    for (const [category, services] of Object.entries(selectedServices)) {
+                        servicesText += `- ${category}: ${services.join(", ")}%0A`;
+                    }
+                    if (Object.keys(selectedServices).length === 0) {
+                        servicesText = "No services selected";
+                    }
+            
+                    // Construct the WhatsApp message
+                    let whatsappMessage = `Hello, I would like to book an appointment:%0A
+                    - Name: ${name}%0A
+                    - Email: ${email}%0A
+                    - Phone: ${phone}%0A
+                    ${servicesText}
+                    - Date: ${date}%0A
+                    - Time: ${time}%0A
+                    - Message: ${message}`;
+            
+                    // Replace with the correct WhatsApp number (including country code)
+                    let phoneNumber = "212706194405";
+            
+                    // Open WhatsApp chat
+                    let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+                    window.open(whatsappURL, "_blank");
                 });
-              </script>
-              
+            </script>
 
             </div>
 
