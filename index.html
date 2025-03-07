@@ -926,21 +926,30 @@
               
                 <div class="input-wrapper">
                   <input type="text" name="phone" placeholder="Phone Number" required class="input-field" id="phone">
-                  <select name="category" class="input-field" id="categorySelect">
-                    <option value="" disabled selected id="select_category">Select category</option>
-                    <option value="gentleman">Gentleman</option>
-                    <option value="traitement">Traitement</option>
-                    <option value="facial-care">Facial Care</option>
-                    <option value="coloring">Coloring</option>
-                    <option value="gentlekids">Gentlekids</option>
-                  </select>
                 </div>
               
-                <!-- New select field for services, initially hidden -->
-                <div class="input-wrapper" id="serviceWrapper" style="display: none;">
-                  <select name="service" class="input-field" id="serviceSelect">
-                    <option value="" disabled selected>Select service</option>
-                  </select>
+                <!-- Accordion container for categories and services -->
+                <div id="categoriesAccordion">
+                  <div class="accordion-item">
+                    <button class="accordion-toggle">Gentleman</button>
+                    <div class="accordion-content" data-category="gentleman"></div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-toggle">Traitement</button>
+                    <div class="accordion-content" data-category="traitement"></div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-toggle">Facial Care</button>
+                    <div class="accordion-content" data-category="facial-care"></div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-toggle">Coloring</button>
+                    <div class="accordion-content" data-category="coloring"></div>
+                  </div>
+                  <div class="accordion-item">
+                    <button class="accordion-toggle">Gentlekids</button>
+                    <div class="accordion-content" data-category="gentlekids"></div>
+                  </div>
                 </div>
               
                 <input type="date" name="date" required class="input-field date">
@@ -984,30 +993,37 @@
                   ]
                 };
               
-                // Get DOM elements
-                const categorySelect = document.getElementById("categorySelect");
-                const serviceSelect = document.getElementById("serviceSelect");
-                const serviceWrapper = document.getElementById("serviceWrapper");
+                // Populate accordion content with services
+                document.querySelectorAll(".accordion-content").forEach(content => {
+                  const category = content.getAttribute("data-category");
+                  const services = table[category];
               
-                // Event listener for category selection
-                categorySelect.addEventListener("change", function() {
-                  const selectedCategory = this.value;
+                  services.forEach(service => {
+                    const checkboxDiv = document.createElement("div");
+                    checkboxDiv.innerHTML = `
+                      <label>
+                        <input type="checkbox" name="services" value="${category}:${service.Service}">
+                        ${service.Service} - ${service.Price} (${service.Description})
+                      </label>
+                    `;
+                    content.appendChild(checkboxDiv);
+                  });
+                });
               
-                  // Clear previous options in service select
-                  serviceSelect.innerHTML = '<option value="" disabled selected>Select service</option>';
+                // Accordion toggle functionality
+                document.querySelectorAll(".accordion-toggle").forEach(button => {
+                  button.addEventListener("click", function() {
+                    const content = this.nextElementSibling;
+                    const isOpen = content.style.display === "block";
               
-                  // If a valid category is selected, populate the service dropdown and show it
-                  if (table[selectedCategory]) {
-                    table[selectedCategory].forEach(service => {
-                      const option = document.createElement("option");
-                      option.value = service.Service;
-                      option.text = `${service.Service} - ${service.Price} (${service.Description})`;
-                      serviceSelect.appendChild(option);
+                    // Close all other accordion items
+                    document.querySelectorAll(".accordion-content").forEach(item => {
+                      item.style.display = "none";
                     });
-                    serviceWrapper.style.display = "block"; // Show the service select
-                  } else {
-                    serviceWrapper.style.display = "none"; // Hide if no category selected
-                  }
+              
+                    // Toggle the clicked one
+                    content.style.display = isOpen ? "none" : "block";
+                  });
                 });
               
                 // Form submission handler
@@ -1018,18 +1034,33 @@
                   let name = document.querySelector("[name='name']").value;
                   let email = document.querySelector("[name='email_address']").value;
                   let phone = document.querySelector("[name='phone']").value;
-                  let category = document.querySelector("[name='category']").value;
-                  let service = document.querySelector("[name='service']").value || "Not specified";
                   let date = document.querySelector("[name='date']").value;
                   let message = document.querySelector("[name='message']").value;
+              
+                  // Collect selected services
+                  const selectedServices = Array.from(document.querySelectorAll("input[name='services']:checked"))
+                    .map(checkbox => checkbox.value.split(":"))
+                    .reduce((acc, [category, service]) => {
+                      acc[category] = acc[category] || [];
+                      acc[category].push(service);
+                      return acc;
+                    }, {});
+              
+                  // Format services for WhatsApp message
+                  let servicesText = "Selected Services:%0A";
+                  for (const [category, services] of Object.entries(selectedServices)) {
+                    servicesText += `- ${category}: ${services.join(", ")}%0A`;
+                  }
+                  if (Object.keys(selectedServices).length === 0) {
+                    servicesText = "No services selected";
+                  }
               
                   // Construct the WhatsApp message
                   let whatsappMessage = `Hello, I would like to book an appointment:%0A
                   - Name: ${name}%0A
                   - Email: ${email}%0A
                   - Phone: ${phone}%0A
-                  - Category: ${category}%0A
-                  - Service: ${service}%0A
+                  ${servicesText}
                   - Date: ${date}%0A
                   - Message: ${message}`;
               
