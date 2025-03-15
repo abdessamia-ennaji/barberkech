@@ -549,9 +549,10 @@ document.addEventListener('DOMContentLoaded', function() {
         name.placeholder = translations[lang].appointment.name;
         email.placeholder = translations[lang].appointment.email;
         phone.placeholder = translations[lang].appointment.phone;
-        select_category.textContent = translations[lang].appointment.select_category;
 
         // BUG 🐛
+        // select_category.textContent = translations[lang].appointment.select_category;
+
         // app_beauty_spa.textContent = translations[lang].appointment.app_beauty_spa;
         // app_head_massage.textContent = translations[lang].appointment.app_head_massage;
         // shaving_facial.textContent = translations[lang].appointment.shaving_facial;
