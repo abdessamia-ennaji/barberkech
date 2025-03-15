@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const callUs = document.getElementById('call_us');
     const opening_hour = document.getElementById('opening_hour');
     const opening_hour_time = document.getElementById('opening_hour_time');
-    const barber_kech = document.getElementById('barber_kech');
-    const mobile_barber = document.getElementById('mobile_barber');
+    // const barber_kech = document.getElementById('barber_kech');
+    // const mobile_barber = document.getElementById('mobile_barber');
     const nav_home = document.getElementById('nav_home');
     const nav_services = document.getElementById('nav_services');
     const nav_pricing = document.getElementById('nav_pricing');
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 call_us: 'Call Us :',
                 opening_hour: 'Opening Hour :',
                 opening_hour_time: 'Sunday - Friday, 08 am - 09 pm',
-                barber_kech: 'Barber Kech',
-                mobile_barber: 'Mobile Barber',
+                // barber_kech: 'Barber Kech',
+                // mobile_barber: 'Mobile Barber',
                 nav_home: 'Home',
                 nav_services: 'Services',
                 nav_pricing: 'Pricing',
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             footer: {
                 // footer_logo : 'Barber Kech',
-                footer_title : 'Barber Kech',
+                // footer_title : 'Barber Kech',
                 subscribe_now : 'Subscribe Now',
                 email_address : 'Enter Your Email',
                 quick_links : 'Quick Links',
@@ -237,8 +237,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 call_us: 'Appelez-nous :',
                 opening_hour: 'Heures d\'ouverture :',
                 opening_hour_time: 'Dimanche - Vendredi, 08 h - 21 h',
-                barber_kech: 'Barbier Kech',
-                mobile_barber: 'Barbier mobile',
+                // barber_kech: 'Barbier Kech',
+                // mobile_barber: 'Barbier mobile',
                 nav_home: 'Accueil',
                 nav_services: 'Services',
                 nav_pricing: 'Tarifs',
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             footer: {
                 // footer_logo: 'Barber Kech',
-                footer_title: 'Barber Kech',
+                // footer_title: 'Barber Kech',
                 subscribe_now: 'Abonnez-vous maintenant',
                 email_address: 'Entrez votre adresse e-mail',
                 quick_links: 'Liens rapides',
@@ -354,8 +354,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 call_us: 'اتصل بنا :',
                 opening_hour: 'ساعات العمل :',
                 opening_hour_time: 'من الأحد إلى الجمعة، من 08 صباحًا إلى 09 مساءً',
-                barber_kech: 'حلاق كيش',
-                mobile_barber: 'حلاق متنقل',
+                // barber_kech: 'حلاق كيش',
+                // mobile_barber: 'حلاق متنقل',
                 nav_home: 'الصفحة الرئيسية',
                 nav_services: 'الخدمات',
                 nav_pricing: 'التسعير',
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             footer: {
                 // footer_logo: 'Barber Kech',
-                footer_title: 'Barber Kech',
+                // footer_title: 'Barber Kech',
                 subscribe_now: 'اشترك الآن',
                 email_address: 'أدخل بريدك الإلكتروني',
                 quick_links: 'روابط سريعة',
@@ -497,8 +497,8 @@ document.addEventListener('DOMContentLoaded', function() {
         callUs.textContent = translations[lang].header.call_us;
         opening_hour.textContent = translations[lang].header.opening_hour;
         opening_hour_time.textContent = translations[lang].header.opening_hour_time;
-        barber_kech.textContent = translations[lang].header.barber_kech;
-        mobile_barber.textContent = translations[lang].header.mobile_barber;
+        // barber_kech.textContent = translations[lang].header.barber_kech;
+        // mobile_barber.textContent = translations[lang].header.mobile_barber;
         nav_home.textContent = translations[lang].header.nav_home;
         nav_services.textContent = translations[lang].header.nav_services;
         nav_pricing.textContent = translations[lang].header.nav_pricing;
@@ -576,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //FOOTER ELEMENTS
         // footer_logo.textContent = translations[lang].footer.footer_logo;
-        footer_title.textContent = translations[lang].footer.footer_title;
+        // footer_title.textContent = translations[lang].footer.footer_title;
         subscribe_now.textContent = translations[lang].footer.subscribe_now;
         email_address.placeholder = translations[lang].footer.email_address;
         quick_links.textContent = translations[lang].footer.quick_links;
