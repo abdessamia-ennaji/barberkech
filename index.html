@@ -108,7 +108,7 @@
 
             <p class="item-title" id="call_us">Call Us :</p>
 
-            <a href="tel:212706194405" class="item-link">+212 706-194405</a>
+            <a href="tel:212600499490" class="item-link">+212 600-499490</a>
           </li>
 
           <li class="header-top-item">
@@ -507,7 +507,7 @@
                     <h3 class="h3 card-title">Beard</h3>
                     <p class="card-text">Grooming & shaping 20-30 minutes</p>
                   </div>
-                  <data class="card-price" value="80">80 DH</data>
+                  <data class="card-price" value="150">150 DH</data>
                 </div>
               </li>
               
@@ -520,11 +520,11 @@
                     <h3 class="h3 card-title">Beard Trim</h3>
                     <p class="card-text">Precise trimming 15-20 minutes</p>
                   </div>
-                  <data class="card-price" value="50">50 DH</data>
+                  <data class="card-price" value="150">150 DH</data>
                 </div>
               </li>
               
-              <li data-filter="gentleman">
+              <!-- <li data-filter="gentleman">
                 <div class="pricing-card">
                   <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
                     <img src="./assets/images/pricing/Blowout.jpg" width="90" height="90" alt="Blowout" class="img-cover">
@@ -535,7 +535,7 @@
                   </div>
                   <data class="card-price" value="50">50 DH</data>
                 </div>
-              </li>
+              </li> -->
               
               <li data-filter="gentleman">
                 <div class="pricing-card">
@@ -928,7 +928,7 @@
               <form id="whatsappForm" class="appoin-form">
                 <div class="input-wrapper">
                     <input type="text" name="name" placeholder="Your Full Name" required class="input-field" id="name">
-                    <input type="email" name="email_address" placeholder="Email Address" required class="input-field" id="email">
+                    <!-- <input type="email" name="email_address" placeholder="Email Address" required class="input-field" id="email"> -->
                 </div>
                 
                 <div class="input-wrapper">
@@ -974,9 +974,9 @@
                 const table = {
                     gentleman: [
                         { "Service": "Haircut", "Description": "Clean & stylish 30-40 minutes", "Price": "120 DH", "Image": "./assets/images/pricing-1.jpg" },
-                        { "Service": "Beard", "Description": "Grooming & shaping 20-30 minutes", "Price": "80 DH", "Image": "./assets/images/pricing/beard.jpg" },
-                        { "Service": "Beard Trim", "Description": "Precise trimming 15-20 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Beard Trim.jpg" },
-                        { "Service": "Blowout", "Description": "Smooth & voluminous 20-30 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Blowout.jpg" },
+                        { "Service": "Beard", "Description": "Grooming & shaping 20-30 minutes", "Price": "150 DH", "Image": "./assets/images/pricing/beard.jpg" },
+                        { "Service": "Beard Trim", "Description": "Precise trimming 15-20 minutes", "Price": "150 DH", "Image": "./assets/images/pricing/Beard Trim.jpg" },
+                        // { "Service": "Blowout", "Description": "Smooth & voluminous 20-30 minutes", "Price": "50 DH", "Image": "./assets/images/pricing/Blowout.jpg" },
                         { "Service": "Zero Cut", "Description": "Close shave cut 20-30 minutes", "Price": "200 DH", "Image": "./assets/images/pricing/Zero Cut.jpg" }
                     ],
                     traitement: [
@@ -1039,7 +1039,7 @@
             
                     // Collect form data
                     let name = document.querySelector("[name='name']").value;
-                    let email = document.querySelector("[name='email_address']").value;
+                    // let email = document.querySelector("[name='email_address']").value;
                     let phone = document.querySelector("[name='phone']").value;
                     let date = document.querySelector("[name='date']").value;
                     let time = document.querySelector("[name='time']").value;
@@ -1066,7 +1066,7 @@
                     // Construct the WhatsApp message
                     let whatsappMessage = `Hello, I would like to book an appointment:%0A
                     - Name: ${name}%0A
-                    - Email: ${email}%0A
+                    
                     - Phone: ${phone}%0A
                     ${servicesText}
                     - Date: ${date}%0A
@@ -1074,7 +1074,7 @@
                     - Message: ${message}`;
             
                     // Replace with the correct WhatsApp number (including country code)
-                    let phoneNumber = "212706194405";
+                    let phoneNumber = "212600499490";
             
                     // Open WhatsApp chat
                     let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
@@ -1098,7 +1098,7 @@
       <!-- 
         - #OURPRODUCTS
       -->
-      <section class="section gallery" id="ourproducts" aria-label="ourproducts">
+      <!-- <section class="section gallery" id="ourproducts" aria-label="ourproducts">
         <div class="container">
 
           <div class="title-wrapper">
@@ -1217,7 +1217,7 @@
           </ul>
 
         </div>
-      </section>
+      </section> -->
 
       <!-- 
         - #TESTIMONIALS
@@ -1440,7 +1440,7 @@
             <li class="footer-list-item">
               <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
 
-              <a href="tel:+212706194405" class="contact-link" id="contact_link" dir="ltr">+212 706-194405</a>
+              <a href="tel:+212600499490" class="contact-link" id="contact_link" dir="ltr">+212 600-499490</a>
             </li>
 
             <li class="footer-list-item">
@@ -1487,7 +1487,7 @@
   <!-- 
     - #WHATSAPP FLOAT
   -->
-  <a href="https://wa.me/+212706194405" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/+212600499490" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp whatsapp-icon"></i>
 </a>
 </div>
