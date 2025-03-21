@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header: {
                 call_us: 'Call Us :',
                 opening_hour: 'Opening Hour :',
-                opening_hour_time: 'Sunday - Friday, 08 am - 09 pm',
+                opening_hour_time: 'Sunday - Friday, 07 am - 01 am',
                 // barber_kech: 'Barber Kech',
                 // mobile_barber: 'Mobile Barber',
                 nav_home: 'Home',
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header: {
                 call_us: 'Appelez-nous :',
                 opening_hour: 'Heures d\'ouverture :',
-                opening_hour_time: 'Dimanche - Vendredi, 08 h - 21 h',
+                opening_hour_time: 'Dimanche - Vendredi, 07 h - 01 h',
                 // barber_kech: 'Barbier Kech',
                 // mobile_barber: 'Barbier mobile',
                 nav_home: 'Accueil',
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header: {
                 call_us: 'اتصل بنا :',
                 opening_hour: 'ساعات العمل :',
-                opening_hour_time: 'من الأحد إلى الجمعة، من 08 صباحًا إلى 09 مساءً',
+                opening_hour_time: 'من الأحد إلى الجمعة، من 07 صباحًا إلى 01 ليلا',
                 // barber_kech: 'حلاق كيش',
                 // mobile_barber: 'حلاق متنقل',
                 nav_home: 'الصفحة الرئيسية',
