@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const our_products = document.getElementById('our_products');
     const nav_testimonials = document.getElementById('nav_testimonials');
     const nav_appointment = document.getElementById('nav_appointment');
+    const nav_appointment1 = document.getElementById('nav_appointment1');
     // ========================================================================
     // SLIDER ELEMENTS
     // ========================================================================
@@ -138,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 our_products: 'Our Products',
                 nav_testimonials: 'Testimonials',
                 nav_appointment: 'Appointment',
+                nav_appointment1: 'Appointment',
             },
             slider: {
                 slide_title: 'Mobile barber service for today’s gentleman in the heart of Marrakech',
@@ -246,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 our_products: 'Nos Produits',
                 nav_testimonials: 'Témoignages',
                 nav_appointment: 'Rendez-vous',
+                nav_appointment1: 'Rendez-vous',
             },
             slider: {
                 slide_title: 'Service de barbier mobile pour le gentleman d\'aujourd\'hui au cœur de Marrakech.',
@@ -363,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 our_products: 'منتجاتنا',
                 nav_testimonials: 'الشهادات',
                 nav_appointment: 'موعد',
+                nav_appointment1: 'موعد',
             },
             slider: {
                 slide_title: 'خدمة حلاق متنقلة للسيد العصري في قلب مراكش',
@@ -503,9 +507,10 @@ document.addEventListener('DOMContentLoaded', function() {
         nav_services.textContent = translations[lang].header.nav_services;
         nav_pricing.textContent = translations[lang].header.nav_pricing;
         nav_gallery.textContent = translations[lang].header.nav_gallery;
-        our_products.textContent = translations[lang].header.our_products;
+        // our_products.textContent = translations[lang].header.our_products; //UNTILL BACK IT TO IT
         nav_testimonials.textContent = translations[lang].header.nav_testimonials;
         nav_appointment.textContent = translations[lang].header.nav_appointment;
+        nav_appointment1.textContent = translations[lang].header.nav_appointment1;
     
         // SLIDER ELEMENTS
         slide_title.textContent = translations[lang].slider.slide_title;
