@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav_services = document.getElementById('nav_services');
     const nav_pricing = document.getElementById('nav_pricing');
     const nav_gallery = document.getElementById('nav_gallery');
-    const our_products = document.getElementById('our_products');
+    // const our_products = document.getElementById('our_products');
     const nav_testimonials = document.getElementById('nav_testimonials');
     const nav_appointment = document.getElementById('nav_appointment');
     const nav_appointment1 = document.getElementById('nav_appointment1');
