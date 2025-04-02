@@ -552,7 +552,7 @@ document.addEventListener('DOMContentLoaded', function() {
         appointment_title.textContent = translations[lang].appointment.appointment_title;
         appointment_text.textContent = translations[lang].appointment.appointment_text;
         name.placeholder = translations[lang].appointment.name;
-        email.placeholder = translations[lang].appointment.email;
+        // email.placeholder = translations[lang].appointment.email;
         phone.placeholder = translations[lang].appointment.phone;
 
         // BUG 🐛
@@ -567,9 +567,9 @@ document.addEventListener('DOMContentLoaded', function() {
         appointment_now.textContent = translations[lang].appointment.appointment_now;
 
         // OUR PRODUCTS ELEMENTS
-        product_title.textContent = translations[lang].product.product_title;
-        product_text.textContent = translations[lang].product.product_text;
-        explore_products.textContent = translations[lang].product.explore_products;
+        // product_title.textContent = translations[lang].product.product_title;
+        // product_text.textContent = translations[lang].product.product_text;
+        // explore_products.textContent = translations[lang].product.explore_products;
 
         // TESTIMONIALS ELEMENTS
         testimonials_title.textContent = translations[lang].testimonials.testimonials_title;
